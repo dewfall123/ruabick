@@ -19,6 +19,7 @@
   "scripts": {
     "build:copy-md": "pnpm -F @vfc/vite-plugin-gen-temp run build:vite-plugin-gen-temp",
     "dev": "turbo run dev",
+    "build": "turbo run build",
     "lint": "eslint --cache packages/*/{src,types,__tests__}/**",
     "format": "prettier --write --cache ."
   },

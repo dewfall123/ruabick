@@ -18,6 +18,17 @@
     },
     "build:vitepress-demo-block": {
       "outputs": ["dist/**"]
+    },
+    "build": {
+      "dependsOn": [
+        "^build:vitepress-demo-block",
+        "^build:vite-plugin-gen-temp",
+        "^build:md-demo-plugins",
+        "docs:build"
+      ]
+    },
+    "docs:build": {
+      "outputs": ["dist/**"]
     }
   }
 }
