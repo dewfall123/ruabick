@@ -1,0 +1,55 @@
+# Introduction
+
+VFC `VitePress-for-Components` is documentation tool for developing libraries (based on VitePress)。The functional design was copied from [dumi](https://d.umijs.org). But `dumi` currently does not support `vue`.
+
+::: info
+The predecessor of the project was [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
+:::
+
+## Motivation
+
+VitePress is very fast and lightweight, but there is the following shortcomings under the scene of the component document:
+
+##### 1. The document and Demo have to be written twice.
+
+> Refer to [dumi's demo-principle](https://d.umijs.org/guide/demo-principle)
+
+##### 2. Documentation, Demo and source code in different directories, The sense of contact is not strong.
+
+> The source code and Demo are usually in the `src` directory, but VitePress usually needs to create a new 'docs' directory, which should be in the same place.
+
+> Refer to [dumi's directory structure](https://d.umijs.org/guide/basic)
+
+##### 3. We need the function of automatically generate component API document.
+
+## Featrues
+
+#### 1. Present Demo in the. Md file
+
+```html
+<demo src="./demo.vue" title="Demo block" desc="use demo"></demo>
+```
+
+<demo src="./demo.vue" title="Demo block" desc="use demo"></demo>
+
+#### 2. File mapping
+
+A common directory for using `VFC` is as follows:
+
+```md
+docs
+├── index.en-US.md // VFC will automatically process '.[lang].md' File
+├── index.zh-CN.md
+src
+├── loading
+│ ├── demo
+│ │ └── demo.vue
+│ ├── index.en-US.md // Map to the docs directory with the 'map.path' set by 'FrontMatter'
+│ ├── index.zh-CN.md
+│ └── loading.vue
+└── ...
+```
+
+### 3. API automatically generates
+
+Doing...

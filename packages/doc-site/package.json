@@ -1,0 +1,22 @@
+{
+  "name": "@vfc/doc-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "initial-scan .docs && pnpm docs:dev",
+    "docs:dev": "vitepress dev .docs --host",
+    "docs:build": "vitepress build .docs",
+    "docs:serve": "vitepress serve .docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vfc/md-demo-plugins": "workspace:^1.0.0",
+    "@vfc/vite-plugin-gen-temp": "workspace:^1.0.0",
+    "@vfc/vitepress-demo-block": "workspace:^1.0.0",
+    "vite": "^3.0.2",
+    "vitepress": "1.0.0-alpha.4"
+  }
+}
