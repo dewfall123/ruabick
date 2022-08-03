@@ -7,7 +7,7 @@ import { resolve } from 'path';
 export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
-
+  base: process.env.NODE_ENV === 'production' ? '/vfc' : '/',
   locales: {
     '/': {
       lang: 'zh-CN',
