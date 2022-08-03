@@ -13,7 +13,7 @@ async function genTempDocs(root: string, inputOptions: Options) {
     ...inputOptions,
   };
 
-  const vitepressConfigs = await resolveConfig(root);
+  const vitepressConfigs = await resolveConfig(options.docsDir);
 
   if (options.initial) {
     await fsExtra.remove(options.tempDir);

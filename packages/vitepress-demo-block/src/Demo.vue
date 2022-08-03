@@ -4,7 +4,6 @@ import copySvg from './Icons/copy.vue';
 import codeSvg from './Icons/code.vue';
 import SfcPlayground from './SfcPlayground.vue';
 import { useCopyCode } from './useCopyCode';
-import { useTheme } from './useTheme';
 
 const props = withDefaults(
   defineProps<{
@@ -32,43 +31,42 @@ const decodedHighlightedCode = computed(() =>
 
 const expand = ref(props.defaultExpand);
 const toggleExpand = () => (expand.value = !expand.value);
-
-const { isDark } = useTheme();
 </script>
 
 <template>
-  <article v-bind="$attrs" class="vitepress-demo">
-    <div class="demo-slot">
-      <slot></slot>
-    </div>
-
-    <div class="demo-title-desc" v-show="title || desc">
-      <span class="demo-title">{{ title }}</span>
-      <span class="demo-desc">{{ desc }}</span>
-    </div>
-
-    <div class="demo-actions">
-      <div class="demo-platforms">
-        <SfcPlayground :content="decodedCode" :importMap="importMap" />
+  <ClientOnly>
+    <article v-bind="$attrs" class="vitepress-demo">
+      <div class="demo-slot">
+        <slot></slot>
       </div>
-      <div class="demo-buttons">
-        <div class="demo-actions-copy">
-          <span v-show="showTip" class="demo-actions-tip">复制成功!</span>
-          <copySvg v-show="!showTip" @click="copyCode" title="复制" />
+
+      <div class="demo-title-desc" v-show="title || desc">
+        <span class="demo-title">{{ title }}</span>
+        <span class="demo-desc">{{ desc }}</span>
+      </div>
+
+      <div class="demo-actions">
+        <div class="demo-platforms">
+          <SfcPlayground :content="decodedCode" :importMap="importMap" />
         </div>
-        <codeSvg
-          class="demo-actions-expand"
-          @click="toggleExpand()"
-          title="展开"
-        />
+        <div class="demo-buttons">
+          <div class="demo-actions-copy">
+            <span v-show="showTip" class="demo-actions-tip">复制成功!</span>
+            <copySvg v-show="!showTip" @click="copyCode" title="复制" />
+          </div>
+          <codeSvg
+            class="demo-actions-expand"
+            @click="toggleExpand()"
+            title="展开"
+          />
+        </div>
       </div>
-    </div>
-    <div
-      v-show="expand"
-      v-html="decodedHighlightedCode"
-      :class="`language-${lang} extra-class`"
-    ></div>
-  </article>
+      <div
+        v-show="expand"
+        v-html="decodedHighlightedCode"
+        :class="`language-${lang} extra-class`"
+      ></div></article
+  ></ClientOnly>
 </template>
 
 <style src="./demo.less"></style>

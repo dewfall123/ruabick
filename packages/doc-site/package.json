@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "initial-scan .docs && pnpm docs:dev",
-    "docs:dev": "vitepress dev .docs --host",
-    "docs:build": "vitepress build .docs",
-    "docs:serve": "vitepress serve .docs"
+    "dev": "initial-scan .docs && pnpm site:dev",
+    "site:dev": "vitepress dev .docs --host",
+    "site:build": "vitepress build .docs",
+    "site:serve": "vitepress serve .docs --host"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +17,7 @@
     "@vfc/vite-plugin-gen-temp": "workspace:^1.0.0",
     "@vfc/vitepress-demo-block": "workspace:^1.0.0",
     "vite": "^3.0.2",
-    "vitepress": "1.0.0-alpha.4"
-  },
-  "dependencies": {
-    "ahooks-vue": "^0.13.3",
-    "axios": "^0.27.2"
+    "vitepress": "1.0.0-alpha.4",
+    "vue-typical": "^2.1.0"
   }
 }

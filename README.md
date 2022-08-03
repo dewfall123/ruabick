@@ -11,6 +11,7 @@
 ### TODO
 
 - [ ] API doc generation.
-- [ ] readme
+- [ ] document
 - [ ] changeset
 - [ ] cli
+- [ ] migrate

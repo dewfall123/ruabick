@@ -1,6 +1,10 @@
 {
   "name": "vfc-next",
-  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -19,9 +23,11 @@
   "scripts": {
     "build:copy-md": "pnpm -F @vfc/vite-plugin-gen-temp run build:vite-plugin-gen-temp",
     "dev": "turbo run dev",
-    "build": "turbo run build",
+    "build": "turbo run site:build",
+    "serve": "turbo run site:serve",
     "lint": "eslint --cache packages/*/{src,types,__tests__}/**",
-    "format": "prettier --write --cache ."
+    "format": "prettier --write --cache .",
+    "np": "np"
   },
   "lint-staged": {
     "*": [
@@ -42,5 +48,8 @@
     "overrides": {
       "vitepress": "^1.0.0-alpha.4"
     }
+  },
+  "dependencies": {
+    "np": "^7.6.2"
   }
 }

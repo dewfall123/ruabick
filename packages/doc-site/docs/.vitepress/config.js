@@ -2,10 +2,12 @@ import { defineConfig } from 'vitepress';
 import { applyPlugins } from '@vfc/md-demo-plugins';
 import { genTemp } from '@vfc/vite-plugin-gen-temp';
 import { sidebar } from './sidebar';
+import { resolve } from 'path';
 
 export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
+
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -37,6 +39,11 @@ export default defineConfig({
   vue: {},
   vite: {
     plugins: [genTemp()],
+    resolve: {
+      alias: {
+        'my-button': resolve('./src/'),
+      },
+    },
   },
   markdown: {
     config: (md) => {

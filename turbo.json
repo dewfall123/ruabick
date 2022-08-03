@@ -19,15 +19,15 @@
     "build:vitepress-demo-block": {
       "outputs": ["dist/**"]
     },
-    "build": {
+    "site:build": {
       "dependsOn": [
         "^build:vitepress-demo-block",
         "^build:vite-plugin-gen-temp",
-        "^build:md-demo-plugins",
-        "docs:build"
-      ]
+        "^build:md-demo-plugins"
+      ],
+      "outputs": ["dist/**"]
     },
-    "docs:build": {
+    "site:serve": {
       "outputs": ["dist/**"]
     }
   }
