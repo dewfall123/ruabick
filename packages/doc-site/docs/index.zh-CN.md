@@ -13,7 +13,7 @@ hero:
       link: /guide/
     - theme: alt
       text: 示例站点
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/dewfall123/vfc
 
 features:
   - title: Demo展示

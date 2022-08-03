@@ -33,7 +33,7 @@ export default defineConfig({
     sidebar,
     algolia: {},
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/dewfall123/vfc' },
     ],
   },
   vue: {},

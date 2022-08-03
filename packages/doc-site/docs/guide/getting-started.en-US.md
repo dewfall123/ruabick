@@ -1,3 +1,3 @@
-# 安装 推荐
+# 安装
 
-`pnpm create vfc`
+TODO

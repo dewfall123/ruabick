@@ -13,7 +13,7 @@ hero:
       link: /en/guide/
     - theme: alt
       text: View on Github
-      link: https://github.com/vuejs/VitePress
+      link: https://github.com/dewfall123/vfc
 
 features:
   - title: Demo display
