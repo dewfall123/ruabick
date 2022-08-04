@@ -1,5 +1,5 @@
 {
-  "name": "vfc-next",
+  "name": "ruabick",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -24,13 +24,13 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run site:build",
-    "dev:create-vlib": "pnpm -F @vfc/create-vlib run dev:create-vlib test-project",
-    "build:create-vlib": "pnpm -F @vfc/create-vlib run build:create-vlib",
+    "dev:create-vlib": "pnpm -F @ruabick/create-vlib run dev:create-vlib test-project",
+    "build:create-vlib": "pnpm -F @ruabick/create-vlib run build:create-vlib",
     "serve": "turbo run site:serve",
     "lint": "eslint --cache packages/*/{src,types,__tests__}/**",
     "format": "prettier --write --cache .",
     "np": "np",
-    "site": "pnpm -F @vfc/doc-site site:deploy",
+    "site": "pnpm -F @ruabick/doc-site site:deploy",
     "version": "changeset version"
   },
   "lint-staged": {

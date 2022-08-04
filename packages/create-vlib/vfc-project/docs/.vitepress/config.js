@@ -11,13 +11,13 @@ export default defineConfig({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: '@{projectName}',
-      description: '@{description}',
+      title: 'ruabick-project',
+      description: '',
     },
     '/en/': {
       lang: 'en-US',
-      title: '@{projectName}',
-      description: '@{description}',
+      title: 'ruabick-project',
+      description: '',
     },
   },
   themeConfig: {
@@ -33,7 +33,7 @@ export default defineConfig({
     sidebar,
     algolia: {},
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/@{user}/@{projectName}' },
+      { icon: 'github', link: 'https://github.com//ruabick-project' },
     ],
   },
   vue: {},
@@ -41,7 +41,7 @@ export default defineConfig({
     plugins: [genTemp()],
     resolve: {
       alias: {
-        '@{projectName}': resolve('./src/'),
+        'ruabick-project': resolve('./src/'),
       },
     },
   },

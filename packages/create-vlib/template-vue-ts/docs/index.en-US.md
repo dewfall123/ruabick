@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: VFC
+title: ruabick
 titleTemplate: A documentation tool for developing libraries (similar to dumi).
 
 hero:
@@ -13,7 +13,7 @@ hero:
       link: /en/guide/
     - theme: alt
       text: View on Github
-      link: https://github.com/dewfall123/vfc
+      link: https://github.com/dewfall123/ruabick
 
 features:
   - title: Demo display

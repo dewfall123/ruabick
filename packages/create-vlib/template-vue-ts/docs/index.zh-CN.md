@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: VFC
+title: ruabick
 titleTemplate: 基于vitepress的vue组件开发的工具
 
 hero:
@@ -13,7 +13,7 @@ hero:
       link: /guide/
     - theme: alt
       text: 示例站点
-      link: https://github.com/dewfall123/vfc
+      link: https://github.com/dewfall123/ruabick
 
 features:
   - title: Demo展示

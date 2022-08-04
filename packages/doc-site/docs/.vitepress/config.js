@@ -1,22 +1,22 @@
 import { defineConfig } from 'vitepress';
-import { applyPlugins } from '@vfc/md-demo-plugins';
-import { genTemp } from '@vfc/vite-plugin-gen-temp';
+import { applyPlugins } from '@ruabick/md-demo-plugins';
+import { genTemp } from '@ruabick/vite-plugin-gen-temp';
 import { sidebar } from './sidebar';
 import { resolve } from 'path';
 
 export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
-  base: process.env.NODE_ENV === 'production' ? '/vfc' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/ruabick' : '/',
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'VFC',
+      title: 'ruabick',
       description: '针对组件开发的VitePress',
     },
     '/en/': {
       lang: 'en-US',
-      title: 'VFC',
+      title: 'ruabick',
       description: 'A tool to document VUE components',
     },
   },
@@ -33,7 +33,7 @@ export default defineConfig({
     sidebar,
     algolia: {},
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/dewfall123/vfc' },
+      { icon: 'github', link: 'https://github.com/dewfall123/ruabick' },
     ],
   },
   vue: {},

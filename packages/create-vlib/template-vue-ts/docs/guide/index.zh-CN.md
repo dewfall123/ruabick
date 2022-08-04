@@ -1,6 +1,6 @@
 # 项目介绍
 
-VFC `VitePress-for-Components` 是一个基于 VitePress 的组件开发工具。功能设计是`抄`的 [dumi](https://d.umijs.org/zh-CN)，但是`dumi`目前不支持`vue`。而且我觉得使用 [VitePress](https://vitepress.vuejs.org/)来构建 vue 组件文档更轻量。
+`ruabick` 是一个基于 VitePress 的组件开发工具。功能设计是`抄`的 [dumi](https://d.umijs.org/zh-CN)，但是`dumi`目前不支持`vue`。而且我觉得使用 [VitePress](https://vitepress.vuejs.org/)来构建 vue 组件文档更轻量。
 
 ::: info
 项目前身是 [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
@@ -33,11 +33,11 @@ VitePress 很轻量很快，但是在`写组件文档的场景`下有以下不�
 
 #### 2. 文件映射
 
-使用 `VFC` 一个常见的目录如下:
+使用 `ruabick` 一个常见的目录如下:
 
 ```md
 docs
-├── index.en-US.md // vfc 会自动处理`.[lang].md`后缀的文件
+├── index.en-US.md // ruabick 会自动处理`.[lang].md`后缀的文件
 ├── index.zh-CN.md
 src
 ├── loading

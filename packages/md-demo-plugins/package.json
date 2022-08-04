@@ -1,6 +1,6 @@
 {
-  "name": "@vfc/md-demo-plugins",
-  "version": "0.0.2",
+  "name": "@ruabick/md-demo-plugins",
+  "version": "0.1.0",
   "license": "MIT",
   "bin": {},
   "files": [
@@ -18,8 +18,7 @@
     }
   },
   "scripts": {
-    "build:md-demo-plugins": "unbuild",
-    "prepublishOnly": "npm run build"
+    "build:md-demo-plugins": "unbuild"
   },
   "keywords": [],
   "author": "dewfall123",

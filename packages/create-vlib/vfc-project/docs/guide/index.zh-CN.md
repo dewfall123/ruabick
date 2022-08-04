@@ -1,6 +1,6 @@
 # 项目介绍
 
-`ruabick` 是一个基于 VitePress 的组件开发工具。功能设计是`抄`的 [dumi](https://d.umijs.org/zh-CN)，但是`dumi`目前不支持`vue`。而且我觉得使用 [VitePress](https://vitepress.vuejs.org/)来构建 vue 组件文档更轻量。
+ruabick `VitePress-for-Components` 是一个基于 VitePress 的组件开发工具。功能设计是`抄`的 [dumi](https://d.umijs.org/zh-CN)，但是`dumi`目前不支持`vue`。而且我觉得使用 [VitePress](https://vitepress.vuejs.org/)来构建 vue 组件文档更轻量。
 
 ::: info
 项目前身是 [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)

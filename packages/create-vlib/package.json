@@ -1,7 +1,7 @@
 {
-  "name": "@vfc/create-vlib",
-  "version": "0.0.2",
-  "description": "@vfc's cli",
+  "name": "@ruabick/create-vlib",
+  "version": "0.1.0",
+  "description": "@ruabick's cli",
   "files": [
     "dist",
     "bin",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dewfall123/vfc"
+    "url": "https://github.com/dewfall123/ruabick"
   },
   "author": "dewfall123",
   "license": "MIT",
@@ -44,7 +44,7 @@
     "ora": "^5.1.0",
     "strip-ansi": "^6.0.0"
   },
-  "homepage": "https://github.com/dewfall123/vfc",
+  "homepage": "https://github.com/dewfall123/ruabick",
   "devDependencies": {
     "@types/gulp": "^4.0.7",
     "@types/gulp-replace": "^0.0.31",

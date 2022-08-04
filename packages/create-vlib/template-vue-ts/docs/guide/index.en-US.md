@@ -1,6 +1,6 @@
 # Introduction
 
-VFC `VitePress-for-Components` is documentation tool for developing libraries (based on VitePress)。The functional design was copied from [dumi](https://d.umijs.org). But `dumi` currently does not support `vue`.
+`ruabick` is documentation tool for developing libraries (based on VitePress)。The functional design was copied from [dumi](https://d.umijs.org). But `dumi` currently does not support `vue`.
 
 ::: info
 The predecessor of the project was [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
@@ -34,11 +34,11 @@ VitePress is very fast and lightweight, but there is the following shortcomings 
 
 #### 2. File mapping
 
-A common directory for using `VFC` is as follows:
+A common directory for using `ruabick` is as follows:
 
 ```md
 docs
-├── index.en-US.md // VFC will automatically process '.[lang].md' File
+├── index.en-US.md // ruabick will automatically process '.[lang].md' File
 ├── index.zh-CN.md
 src
 ├── loading

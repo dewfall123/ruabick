@@ -13,4 +13,4 @@
 
 # 使用
 
-执行命令 `yarn create @vfc/vfc`。
+执行命令 `yarn create @ruabick/ruabick`。

@@ -1,9 +1,9 @@
 import DefaultTheme from 'vitepress/theme';
-import DemoBlock from '@vfc/vitepress-demo-block';
-import '@vfc/vitepress-demo-block/dist/style.css';
+import DemoBlock from '@ruabick/vitepress-demo-block';
+import '@ruabick/vitepress-demo-block/dist/style.css';
 import './var.css';
 
-// import { DemoTag } from '@vfc/md-demo-plugins';
+// import { DemoTag } from '@ruabick/md-demo-plugins';
 
 export default {
   ...DefaultTheme,

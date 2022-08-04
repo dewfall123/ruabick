@@ -1,4 +1,4 @@
-# vfc
+# ruabick
 
 [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)的重构版本，目不在 fork`vitepress`而是使用插件形式。能解决之前版本遗留的大部分问题。
 

@@ -9,7 +9,7 @@ export interface Meta {
 }
 
 export async function prompt(targetDir: string) {
-  const defaultTargetDir = 'vfc-project';
+  const defaultTargetDir = 'ruabick-project';
 
   const questions = [
     {

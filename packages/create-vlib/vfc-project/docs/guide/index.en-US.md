@@ -1,6 +1,6 @@
 # Introduction
 
-`ruabick` is documentation tool for developing libraries (based on VitePress)。The functional design was copied from [dumi](https://d.umijs.org). But `dumi` currently does not support `vue`.
+ruabick `VitePress-for-Components` is documentation tool for developing libraries (based on VitePress)。The functional design was copied from [dumi](https://d.umijs.org). But `dumi` currently does not support `vue`.
 
 ::: info
 The predecessor of the project was [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)

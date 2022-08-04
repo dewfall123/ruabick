@@ -1,7 +1,7 @@
 {
-  "name": "@{projectName}",
+  "name": "project-name",
   "version": "0.0.0",
-  "description": "@{description}",
+  "description": "",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/vitepress-demo-block.umd.cjs",
@@ -29,9 +29,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@ruabick/md-demo-plugins": "latest",
-    "@ruabick/vite-plugin-gen-temp": "latest",
-    "@ruabick/vitepress-demo-block": "latest",
+    "@ruabick/md-demo-plugins": "workspace:^0.0.2",
+    "@ruabick/vite-plugin-gen-temp": "workspace:^0.0.2",
+    "@ruabick/vitepress-demo-block": "workspace:^0.0.2",
     "@vitejs/plugin-vue": "^3.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.20.0",
@@ -40,6 +40,6 @@
     "prettier": "^2.7.1",
     "vite": "latest",
     "vite-plugin-dts": "^1.4.0",
-    "vitepress": "latest"
+    "vitepress": "1.0.0-alpha.4"
   }
 }
