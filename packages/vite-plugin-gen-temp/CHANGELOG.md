@@ -1,5 +1,17 @@
 # @ruabick/vite-plugin-gen-temp
 
+## 0.1.2
+
+### Patch Changes
+
+- build
+
+## 0.1.1
+
+### Patch Changes
+
+- 5852508: bug fix
+
 ## 0.1.0
 
 ### Minor Changes

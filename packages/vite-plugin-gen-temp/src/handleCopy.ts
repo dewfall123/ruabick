@@ -3,7 +3,7 @@ import { yellow, dim, green } from 'colorette';
 import { basename, dirname, extname, join } from 'path';
 import { Options } from './types';
 import matter from 'gray-matter';
-import { copy, ensureFile, existsSync, readFile, writeFile } from 'fs-extra';
+import fsExtra from 'fs-extra';
 import { LOG_PREFIX } from './utils';
 
 export async function handleCopy(
@@ -24,7 +24,7 @@ export async function handleCopy(
   let destPath;
   if (!path.endsWith('.md')) {
     destPath = join(tempDir, path.replace(new RegExp(`^${dir}`), ''));
-    await copy(path, destPath);
+    await fsExtra.copy(path, destPath);
   } else {
     const { finnalPath, finnalContent } = await resolveFrontmatter(
       path,
@@ -39,8 +39,8 @@ export async function handleCopy(
     );
 
     destPath = join(tempDir, fileInLangDir);
-    await ensureFile(destPath);
-    await writeFile(destPath, finnalContent);
+    await fsExtra.ensureFile(destPath);
+    await fsExtra.writeFile(destPath, finnalContent);
   }
 
   console.log(`${LOG_PREFIX} ${green('copy')} ${path} → ${destPath}`);
@@ -67,7 +67,7 @@ export function resolveLocales(vitepressConfigs: SiteConfig) {
 
 async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
   // TODO cache it
-  const originalContent = await readFile(path, 'utf-8');
+  const originalContent = await fsExtra.readFile(path, 'utf-8');
   const { content, data: frontmatter } = matter(originalContent);
 
   const realPath = path;
@@ -81,7 +81,7 @@ async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
     }
 
     const tempPath = join(tempDir, mappedPath);
-    if (existsSync(tempPath)) {
+    if (fsExtra.existsSync(tempPath)) {
       throw new Error(
         `Trying to copy file:${path} to ${tempPath}, but file:${tempPath} already exists.`,
       );
