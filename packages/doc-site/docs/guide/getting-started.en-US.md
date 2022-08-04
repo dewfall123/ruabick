@@ -1,9 +1,9 @@
-# 快速开始
+# Getting started
 
-### 新建项目
+### New project
 
 `pnpm create @ruabick/vlib`
 
-### 现有项目
+### Existing project
 
 TODO
