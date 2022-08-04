@@ -4,7 +4,7 @@
 
 # Features
 
-- 基于[`vitepress-for-component`](https://github.com/dewfall123/vitepress-for-component.git)一键启动开发环境，一键生成文档。
+- 基于[`ruabick`](https://github.com/dewfall123/ruabick.git)一键启动开发环境，一键生成文档。
 - 基于`vite`一键打包。
 - 使用[`np`](https://github.com/sindresorhus/np)发布版本（非常 nice 的发布工具）。
 - 使用`gh-pages`一键发布 github.io 文档。
@@ -13,4 +13,4 @@
 
 # 使用
 
-执行命令 `yarn create @ruabick/ruabick`。
+执行命令 `yarn create @ruabick/vlib`。
