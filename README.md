@@ -15,3 +15,4 @@
 - [ ] changeset
 - [ ] cli
 - [ ] migrate
+- [ ] support repl demo

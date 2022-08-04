@@ -4,10 +4,11 @@
   "workspaces": [
     "packages/*"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.24.1",
     "@types/node": "^18.6.1",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
@@ -23,11 +24,14 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run site:build",
+    "dev:create-vlib": "pnpm -F @vfc/create-vlib run dev:create-vlib test-project",
+    "build:create-vlib": "pnpm -F @vfc/create-vlib run build:create-vlib",
     "serve": "turbo run site:serve",
     "lint": "eslint --cache packages/*/{src,types,__tests__}/**",
     "format": "prettier --write --cache .",
     "np": "np",
-    "site": "pnpm -F @vfc/doc-site site:deploy"
+    "site": "pnpm -F @vfc/doc-site site:deploy",
+    "version": "changeset version"
   },
   "lint-staged": {
     "*": [

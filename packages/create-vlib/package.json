@@ -1,0 +1,73 @@
+{
+  "name": "@vfc/create-vlib",
+  "version": "0.0.2",
+  "description": "@vfc's cli",
+  "files": [
+    "dist",
+    "bin",
+    "template-*"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev:create-vlib": "pnpm build:create-vlib && node ./bin/create-vlib.js",
+    "build:create-vlib": "unbuild"
+  },
+  "bin": {
+    "create-vlib": "bin/create-vlib.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dewfall123/vfc"
+  },
+  "author": "dewfall123",
+  "license": "MIT",
+  "dependencies": {
+    "kolorist": "latest",
+    "commander": "^6.1.0",
+    "del": "^6.0.0",
+    "glob": "^7.1.6",
+    "globby": "^11.0.1",
+    "gulp": "^4.0.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-template": "^5.0.0",
+    "inquirer": "^6.5.2",
+    "metalsmith": "^2.3.0",
+    "ora": "^5.1.0",
+    "strip-ansi": "^6.0.0"
+  },
+  "homepage": "https://github.com/dewfall123/vfc",
+  "devDependencies": {
+    "@types/gulp": "^4.0.7",
+    "@types/gulp-replace": "^0.0.31",
+    "@types/gulp-template": "^5.0.1",
+    "@types/inquirer": "^7.3.1",
+    "@types/node": "^14.14.7",
+    "np": "^7.4.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5",
+    "unbuild": "^0.7.6",
+    "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "documentation",
+    "generator",
+    "vuepress",
+    "dumi",
+    "vue",
+    "vite",
+    "cli"
+  ]
+}

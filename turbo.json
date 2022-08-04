@@ -29,6 +29,9 @@
     },
     "site:serve": {
       "outputs": ["dist/**"]
+    },
+    "build:create-vlib": {
+      "outputs": ["dist/**"]
     }
   }
 }
