@@ -21,35 +21,3 @@ VitePress is very fast and lightweight, but there is the following shortcomings 
 > Refer to [dumi's directory structure](https://d.umijs.org/guide/basic)
 
 ##### 3. We need the function of automatically generate component API document.
-
-## Featrues
-
-#### 1. Present Demo in the. Md file
-
-```html
-<demo src="./demo.vue" title="Demo block" desc="use demo"></demo>
-```
-
-<demo src="./demo.vue" title="Demo block" desc="use demo"></demo>
-
-#### 2. File mapping
-
-A common directory for using `ruabick` is as follows:
-
-```md
-docs
-├── index.en-US.md // ruabick will automatically process '.[lang].md' File
-├── index.zh-CN.md
-src
-├── loading
-│ ├── demo
-│ │ └── demo.vue
-│ ├── index.en-US.md // Map to the docs directory with the 'map.path' set by 'FrontMatter'
-│ ├── index.zh-CN.md
-│ └── loading.vue
-└── ...
-```
-
-### 3. API automatically generates
-
-Doing...

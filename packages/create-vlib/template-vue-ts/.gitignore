@@ -1,0 +1,6 @@
+*.log
+dist
+node_modules
+.temp
+.docs
+.turbo
