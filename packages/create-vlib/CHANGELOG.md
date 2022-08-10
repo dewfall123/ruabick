@@ -1,5 +1,11 @@
 # @ruabick/create-vlib
 
+## 0.1.3
+
+### Patch Changes
+
+- Support api auto generation.
+
 ## 0.1.2
 
 ### Patch Changes

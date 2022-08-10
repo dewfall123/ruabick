@@ -1,5 +1,13 @@
 # @ruabick/md-demo-plugins
 
+## 0.1.3
+
+### Patch Changes
+
+- Support api auto generation.
+- Updated dependencies
+  - @ruabick/utils@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes

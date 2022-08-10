@@ -12,7 +12,7 @@ hero:
       text: 快速上手
       link: /guide/
     - theme: alt
-      text: 示例站点
+      text: Github
       link: https://github.com/dewfall123/ruabick
 
 features:

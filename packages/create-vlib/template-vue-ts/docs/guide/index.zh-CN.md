@@ -21,34 +21,4 @@ VitePress 很轻量很快，但是在`写组件文档的场景`下有以下不�
 
 ##### 3. 需要自动生成组件 API 文档功能。
 
-## 功能特性
-
-#### 1. 在`.md`文件里展示 demo
-
-```html
-<demo src="./demo.vue" title="Demo block" desc="use demo"></demo>
-```
-
-<demo src="./demo.vue" title="Demo block" desc="use demo"></demo>
-
-#### 2. 文件映射
-
-使用 `ruabick` 一个常见的目录如下:
-
-```md
-docs
-├── index.en-US.md // ruabick 会自动处理`.[lang].md`后缀的文件
-├── index.zh-CN.md
-src
-├── loading
-│ ├── demo
-│ │ └── demo.vue
-│ ├── index.en-US.md // 通过 `frontmatter` 设置的`map.path`映射到 docs 目录下
-│ ├── index.zh-CN.md
-│ └── loading.vue
-└── ...
-```
-
-### 3. API 自动生成
-
-开发中...
+> 基于`vue-docgen-api`自动生成 api 文档（参考[arco-design-vue](https://github.com/arco-design/arco-design-vue/tree/main/packages/arco-vue-scripts)的代码）。
