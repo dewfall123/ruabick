@@ -9,7 +9,11 @@ export const sidebar = {
     },
     {
       text: 'demo',
-      items: [{ text: 'demo', link: '/en/demo/' }],
+      items: [
+        { text: 'Demo display', link: '/en/features/demo' },
+        { text: 'Api auto gen', link: '/en/features/api' },
+        { text: 'File mapping', link: '/en/features/mapping' },
+      ],
     },
   ],
   '/': [
