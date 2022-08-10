@@ -1,12 +1,7 @@
 {
-  "name": "@ruabick/md-demo-plugins",
+  "name": "@ruabick/vite-plugin-gen-api-doc",
   "version": "0.1.2",
-  "license": "MIT",
-  "bin": {},
-  "files": [
-    "dist",
-    "bin"
-  ],
+  "description": "",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -18,20 +13,30 @@
     }
   },
   "scripts": {
-    "build:md-demo-plugins": "unbuild"
+    "build:vite-plugin-gen-api-doc": "unbuild"
   },
   "keywords": [],
   "author": "dewfall123",
+  "license": "MIT",
   "dependencies": {
+    "@babel/parser": "^7.18.11",
     "@ruabick/utils": "workspace:^0.1.2",
+    "@vue/compiler-core": "^3.2.37",
+    "chalk": "^5.0.1",
+    "comment-parser": "^1.3.1",
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "vitepress": "1.0.0-alpha.4"
+    "ts-morph": "^15.1.0",
+    "vitepress": "1.0.0-alpha.4",
+    "vue-docgen-api": "^4.50.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
     "@types/markdown-it": "^12.2.3",
-    "unbuild": "^0.7.6"
+    "unbuild": "^0.7.6",
+    "vite": "^3.0.5"
+  },
+  "peerDependencies": {
+    "vite": "^3.0.5"
   }
 }

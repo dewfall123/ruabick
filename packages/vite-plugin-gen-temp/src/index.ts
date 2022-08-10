@@ -4,8 +4,8 @@ import { copySrcMd } from './copySrcMd';
 import { DefaultOptions } from './constants';
 import fsExtra from 'fs-extra';
 import { cyan } from 'colorette';
-import { resolveConfig } from 'vitepress';
 import minimist from 'minimist';
+import { resolveLocaleConfigs } from '@ruabick/utils';
 
 async function genTempDocs(root: string, inputOptions: Options) {
   const options = {
@@ -13,15 +13,15 @@ async function genTempDocs(root: string, inputOptions: Options) {
     ...inputOptions,
   };
 
-  const vitepressConfigs = await resolveConfig(options.docsDir);
+  const localeConfigs = await resolveLocaleConfigs(options.docsDir);
 
   if (options.initial) {
     await fsExtra.remove(options.tempDir);
   }
 
   await Promise.all([
-    copyDocs(options, vitepressConfigs),
-    copySrcMd(options, vitepressConfigs),
+    copyDocs(options, localeConfigs),
+    copySrcMd(options, localeConfigs),
   ]);
 
   if (options.initial) {

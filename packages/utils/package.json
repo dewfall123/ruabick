@@ -1,5 +1,5 @@
 {
-  "name": "@ruabick/md-demo-plugins",
+  "name": "@ruabick/utils",
   "version": "0.1.2",
   "license": "MIT",
   "bin": {},
@@ -18,20 +18,13 @@
     }
   },
   "scripts": {
-    "build:md-demo-plugins": "unbuild"
+    "build:utils": "unbuild"
   },
-  "keywords": [],
-  "author": "dewfall123",
   "dependencies": {
-    "@ruabick/utils": "workspace:^0.1.2",
-    "fs-extra": "^10.1.0",
-    "gray-matter": "^4.0.3",
-    "markdown-it": "^13.0.1",
+    "@vue/compiler-core": "^3.2.37",
     "vitepress": "1.0.0-alpha.4"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "@types/markdown-it": "^12.2.3",
     "unbuild": "^0.7.6"
   }
 }

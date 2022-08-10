@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@ruabick/md-demo-plugins": "workspace:^0.1.2",
+    "@ruabick/vite-plugin-gen-api-doc": "workspace:^1.0.0",
     "@ruabick/vite-plugin-gen-temp": "workspace:^0.1.2",
     "@ruabick/vitepress-demo-block": "workspace:^0.1.2",
     "cross-env": "^7.0.3",

@@ -21,8 +21,12 @@ export const sidebar = {
       ],
     },
     {
-      text: 'demo',
-      items: [{ text: 'demo', link: '/demo/' }],
+      text: '特性',
+      items: [
+        { text: 'Demo展示', link: '/features/demo' },
+        { text: 'Api文档生成', link: '/features/api' },
+        { text: '文件映射', link: '/features/mapping' },
+      ],
     },
   ],
 };

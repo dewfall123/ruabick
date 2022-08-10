@@ -1,22 +1,20 @@
-import { SiteConfig } from 'vitepress';
 import { yellow, dim, green } from 'colorette';
 import { basename, dirname, extname, join } from 'path';
 import { Options } from './types';
 import matter from 'gray-matter';
 import fsExtra from 'fs-extra';
 import { LOG_PREFIX } from './utils';
+import { LocaleConfigs } from '@ruabick/utils';
 
 export async function handleCopy(
   dir: string,
   path: string,
   {
     options,
-    defaultLang,
-    langToPathMap,
+    localeConfigs,
   }: {
     options: Required<Options>;
-    defaultLang: string;
-    langToPathMap: Record<string, string>;
+    localeConfigs: LocaleConfigs;
   },
 ) {
   const { tempDir } = options;
@@ -32,11 +30,7 @@ export async function handleCopy(
       dir,
     );
 
-    const fileInLangDir = handleLangSuffix(
-      finnalPath,
-      defaultLang,
-      langToPathMap,
-    );
+    const fileInLangDir = handleLangSuffix(finnalPath, localeConfigs);
 
     destPath = join(tempDir, fileInLangDir);
     await fsExtra.ensureFile(destPath);
@@ -44,25 +38,6 @@ export async function handleCopy(
   }
 
   console.log(`${LOG_PREFIX} ${green('copy')} ${path} → ${destPath}`);
-}
-
-export function resolveLocales(vitepressConfigs: SiteConfig) {
-  const siteData = vitepressConfigs.site;
-
-  const defaultLang = siteData.lang;
-
-  const langToPathMap = Object.entries(siteData.locales).reduce(
-    (map, [path, localeConfig]) => {
-      map[localeConfig.lang] = path;
-      return map;
-    },
-    {} as Record<string, string>,
-  );
-
-  return {
-    defaultLang,
-    langToPathMap,
-  };
 }
 
 async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
@@ -102,14 +77,12 @@ async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
   };
 }
 
-function handleLangSuffix(
-  path: string,
-  defaultLang: string,
-  langToPathMap: Record<string, string>,
-) {
+function handleLangSuffix(path: string, localeConfigs: LocaleConfigs) {
   const fileName = basename(path);
   const dir = dirname(path);
   const fileNameWithoutMd = fileName.replace(/\.md$/, '');
+
+  const { defaultLang, langToPathMap } = localeConfigs;
 
   const fileExtname = extname(fileNameWithoutMd);
   const langSuffix = fileExtname.slice(1) || defaultLang;

@@ -7,6 +7,9 @@ import { useCopyCode } from './useCopyCode';
 
 const props = withDefaults(
   defineProps<{
+    /**
+     * @zh 源码字符串(需经过encodeURIComponent处理)
+     */
     code: string;
     highlightedCode: string;
     title?: string;

@@ -1,19 +1,17 @@
+import { LocaleConfigs } from '@ruabick/utils';
 import chokidar from 'chokidar';
-import { SiteConfig } from 'vitepress';
-import { handleCopy, resolveLocales } from './handleCopy';
+import { handleCopy } from './handleCopy';
 import { Options } from './types';
 import { removeFile } from './utils';
 
 export async function copySrcMd(
   options: Required<Options>,
-  vitepressConfigs: SiteConfig,
+  localeConfigs: LocaleConfigs,
 ) {
   const { srcDir, initial } = options;
 
-  const { defaultLang, langToPathMap } = resolveLocales(vitepressConfigs);
-
   const copyFile = (file: string) =>
-    handleCopy(srcDir, file, { options, defaultLang, langToPathMap });
+    handleCopy(srcDir, file, { options, localeConfigs });
 
   return new Promise((resolve) => {
     chokidar

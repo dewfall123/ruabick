@@ -1,8 +1,9 @@
-import { defineConfig } from 'vitepress';
 import { applyPlugins } from '@ruabick/md-demo-plugins';
 import { genTemp } from '@ruabick/vite-plugin-gen-temp';
+import { genApiDoc } from '@ruabick/vite-plugin-gen-api-doc';
+import { defineConfig } from 'vitepress';
+import { resolve } from 'node:path';
 import { sidebar } from './sidebar';
-import { resolve } from 'path';
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -38,7 +39,7 @@ export default defineConfig({
   },
   vue: {},
   vite: {
-    plugins: [genTemp()],
+    plugins: [genTemp(), genApiDoc()],
     resolve: {
       alias: {
         'my-button': resolve('./src/'),

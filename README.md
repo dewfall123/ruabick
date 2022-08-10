@@ -10,9 +10,9 @@
 
 ### TODO
 
-- [ ] API doc generation.
+- [x] changeset
+- [x] cli
+- [x] API doc generation.
 - [ ] document
-- [ ] changeset
-- [ ] cli
-- [ ] migrate
+- [ ] migrate doc
 - [ ] support repl demo

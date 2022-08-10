@@ -6,24 +6,35 @@
       "dependsOn": [
         "^build:vitepress-demo-block",
         "^build:vite-plugin-gen-temp",
-        "^build:md-demo-plugins"
+        "^build:md-demo-plugins",
+        "^build:vite-plugin-gen-api-doc"
       ],
       "cache": false
     },
     "build:vite-plugin-gen-temp": {
+      "dependsOn": ["^build:utils"],
       "outputs": ["dist/**"]
     },
     "build:md-demo-plugins": {
+      "dependsOn": ["^build:utils"],
+      "outputs": ["dist/**"]
+    },
+    "build:vite-plugin-gen-api-doc": {
+      "dependsOn": ["^build:utils"],
       "outputs": ["dist/**"]
     },
     "build:vitepress-demo-block": {
+      "outputs": ["dist/**"]
+    },
+    "build:utils": {
       "outputs": ["dist/**"]
     },
     "site:build": {
       "dependsOn": [
         "^build:vitepress-demo-block",
         "^build:vite-plugin-gen-temp",
-        "^build:md-demo-plugins"
+        "^build:md-demo-plugins",
+        "^build:vite-plugin-gen-api-doc"
       ],
       "outputs": ["dist/**"]
     },
