@@ -1,4 +1,4 @@
-# create-vl
+# @ruabick/create-vlib
 
 快速创建 Vue 组件库的脚手架。
 

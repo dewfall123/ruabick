@@ -1,5 +1,11 @@
 # @ruabick/create-vlib
 
+## 0.1.4
+
+### Patch Changes
+
+- add gen-api-doc plugin
+
 ## 0.1.3
 
 ### Patch Changes

@@ -32,6 +32,7 @@
     "@ruabick/md-demo-plugins": "latest",
     "@ruabick/vite-plugin-gen-temp": "latest",
     "@ruabick/vitepress-demo-block": "latest",
+    "@ruabick/vite-plugin-gen-api-doc": "latest",
     "@vitejs/plugin-vue": "^3.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.20.0",
