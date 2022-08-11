@@ -8,7 +8,7 @@ export const sidebar = {
       ],
     },
     {
-      text: 'demo',
+      text: 'featrues',
       items: [
         { text: 'Demo display', link: '/en/features/demo' },
         { text: 'Api auto gen', link: '/en/features/api' },

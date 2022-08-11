@@ -47,7 +47,11 @@ export function genApiDoc(): Plugin {
         }
       }
 
-      return replacedBlocks.join('\n');
+      const replacedCode = matter.stringify(replacedBlocks.join('\n'), {
+        ...frontmatter,
+      });
+
+      return replacedCode;
     },
   };
 }
