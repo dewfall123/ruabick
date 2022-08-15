@@ -2,11 +2,11 @@
 layout: home
 
 title: ruabick
-titleTemplate: A documentation tool for developing libraries (similar to dumi).
+titleTemplate: Ruabick.
 
 hero:
-  text: A documentation tool for developing libraries (similar to dumi).
-  tagline: display you component demo in VitePress
+  text: Ruabick.
+  tagline: Make the development Vue component easier
   actions:
     - theme: brand
       text: Get Started
@@ -16,12 +16,14 @@ hero:
       link: https://github.com/dewfall123/ruabick
 
 features:
-  - title: Demo display
-    details: display you component demo in VitePress.
-  - title: File mapping
-    details: write demo in src directory.
   - title: Based on Vitepress
-    details: based on vite plugins, not fork vitepress.
+    details: Based on VitePress, with enhance plugin, out of the box.
+  - title: Support demo display
+    details: Display you component demo in VitePress.
+  - title: Support api doc auto generation
+    details: Auto generation api doc based on `vue-docgen-api`.
+  - title: Support file mapping
+    details: Write doc file in any directory.
 
 footer:
   license: MIT Licensed
