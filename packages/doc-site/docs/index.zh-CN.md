@@ -2,11 +2,11 @@
 layout: home
 
 title: ruabick
-titleTemplate: 基于vitepress的vue组件开发的工具
+titleTemplate: Ruabick
 
 hero:
-  text: 基于vitepress的vue组件文档的工具
-  tagline: 在vitepress里面展示你的vue组件
+  text: Ruabick
+  tagline: 让开发vue组件变得简单
   actions:
     - theme: brand
       text: 快速上手
@@ -16,12 +16,14 @@ hero:
       link: https://github.com/dewfall123/ruabick
 
 features:
+  - title: 基于VitePress
+    details: 基于VitePress，加上增强插件，开箱即用
   - title: Demo展示
-    details: 像dumi一样在markdown里面展示demo.
-  - title: 文件映射
-    details: 映射src/**/*.md到docs目录下面，在离源码最近的地方写文档.
-  - title: 基于vitepress
-    details: 基于vite插件形式，而不是之前的fork vitepress.
+    details: 像dumi一样在markdown里面展示demo
+  - title: 支持API文档自动生成
+    details: 自动生成vue组件api文档
+  - title: 支持文件映射
+    details: 你可以把.md文件写在任何目录
 
 footer:
   license: MIT Licensed
