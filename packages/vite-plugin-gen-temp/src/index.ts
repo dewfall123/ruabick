@@ -6,6 +6,7 @@ import fsExtra from 'fs-extra';
 import { cyan } from 'colorette';
 import minimist from 'minimist';
 import { resolveLocaleConfigs } from '@ruabick/utils';
+import { LOG_PREFIX } from './utils';
 
 async function genTempDocs(root: string, inputOptions: Options) {
   const options = {
@@ -17,8 +18,10 @@ async function genTempDocs(root: string, inputOptions: Options) {
 
   if (options.initial) {
     await fsExtra.remove(options.tempDir);
+    console.log(`${LOG_PREFIX} remove ${options.tempDir}.`);
   }
 
+  console.log(`${LOG_PREFIX} start generate ${options.tempDir}...`);
   await Promise.all([
     copyDocs(options, localeConfigs),
     copySrcMd(options, localeConfigs),
@@ -30,7 +33,7 @@ async function genTempDocs(root: string, inputOptions: Options) {
   } else {
     console.warn(
       `${cyan(
-        `watching ${options.docsDir} and ${options.srcDir}/**/*.md files changes...`,
+        `${LOG_PREFIX} watching ${options.docsDir} and ${options.srcDir}/**/*.md files changes...`,
       )}`,
     );
   }

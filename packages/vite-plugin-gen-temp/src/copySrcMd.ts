@@ -10,8 +10,9 @@ export async function copySrcMd(
 ) {
   const { srcDir, initial } = options;
 
-  const copyFile = (file: string) =>
-    handleCopy(srcDir, file, { options, localeConfigs });
+  const tasks: Promise<any>[] = [];
+  const copyFile = async (file: string) =>
+    tasks.push(handleCopy(srcDir, file, { options, localeConfigs }));
 
   return new Promise((resolve) => {
     chokidar
@@ -19,10 +20,14 @@ export async function copySrcMd(
         cwd: process.cwd(),
         ignored: [],
         ignoreInitial: !initial,
+        persistent: !initial,
       })
       .on('change', copyFile)
       .on('add', copyFile)
       .on('unlink', (file) => removeFile(file))
-      .on('ready', () => resolve(true));
+      .on('ready', async () => {
+        await Promise.all(tasks);
+        resolve(true);
+      });
   });
 }
