@@ -24,6 +24,6 @@
     "vue": "^3.2.37"
   },
   "scripts": {
-    "build:vitepress-demo-block": "vite build"
+    "build": "vite build"
   }
 }

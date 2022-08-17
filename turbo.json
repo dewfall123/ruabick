@@ -1,47 +1,16 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "baseBranch": "origin/main",
   "pipeline": {
     "dev": {
-      "dependsOn": [
-        "^build:vitepress-demo-block",
-        "^build:vite-plugin-gen-temp",
-        "^build:md-demo-plugins",
-        "^build:vite-plugin-gen-api-doc"
-      ],
+      "dependsOn": ["^build"],
       "cache": false
     },
-    "build:vite-plugin-gen-temp": {
-      "dependsOn": ["^build:utils"],
-      "outputs": ["dist/**"]
-    },
-    "build:md-demo-plugins": {
-      "dependsOn": ["^build:utils"],
-      "outputs": ["dist/**"]
-    },
-    "build:vite-plugin-gen-api-doc": {
-      "dependsOn": ["^build:utils"],
-      "outputs": ["dist/**"]
-    },
-    "build:vitepress-demo-block": {
-      "outputs": ["dist/**"]
-    },
-    "build:utils": {
+    "build": {
+      "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
     "site:build": {
-      "dependsOn": [
-        "^build:vitepress-demo-block",
-        "^build:vite-plugin-gen-temp",
-        "^build:md-demo-plugins",
-        "^build:vite-plugin-gen-api-doc"
-      ],
-      "outputs": ["dist/**"]
-    },
-    "site:serve": {
-      "outputs": ["dist/**"]
-    },
-    "build:create-vlib": {
+      "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     }
   }

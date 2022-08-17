@@ -8,7 +8,7 @@
     "dev": "initial-scan .docs && pnpm site:dev",
     "site:dev": "vitepress dev .docs --host",
     "site:build": "cross-env NODE_ENV=production vitepress build .docs",
-    "site:serve": "vitepress serve .docs --host",
+    "site:serve": "cross-env NODE_ENV=production vitepress serve .docs --host",
     "site:deploy": "gh-pages -d .docs/.vitepress/dist -t true"
   },
   "keywords": [],
@@ -22,7 +22,8 @@
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0",
     "vite": "^3.0.2",
-    "vitepress": "1.0.0-alpha.4",
+    "vitepress": "1.0.0-alpha.5",
+    "vue": "^3.2.37",
     "vue-typical": "^2.1.0"
   }
 }

@@ -21,8 +21,7 @@
     }
   },
   "scripts": {
-    "build:vite-plugin-gen-temp": "unbuild",
-    "patch-cjs": "tsx ./scripts/patchCJS.ts"
+    "build": "unbuild"
   },
   "keywords": [],
   "author": "dewfall123",

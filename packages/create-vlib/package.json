@@ -18,8 +18,8 @@
     }
   },
   "scripts": {
-    "dev:create-vlib": "pnpm build:create-vlib && node ./bin/create-vlib.js",
-    "build:create-vlib": "unbuild"
+    "dev": "pnpm build && node ./bin/create-vlib.js",
+    "build": "unbuild"
   },
   "bin": {
     "create-vlib": "bin/create-vlib.js"

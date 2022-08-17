@@ -18,11 +18,11 @@
     }
   },
   "scripts": {
-    "build:utils": "unbuild"
+    "build": "unbuild"
   },
   "dependencies": {
     "@vue/compiler-core": "^3.2.37",
-    "vitepress": "1.0.0-alpha.4"
+    "vitepress": "1.0.0-alpha.5"
   },
   "devDependencies": {
     "unbuild": "^0.7.6"
