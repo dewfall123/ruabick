@@ -26,8 +26,8 @@
     "release": "np"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "@{user}",
+  "license": "MIT",
   "devDependencies": {
     "@ruabick/md-demo-plugins": "latest",
     "@ruabick/vite-plugin-gen-temp": "latest",
@@ -41,6 +41,7 @@
     "prettier": "^2.7.1",
     "vite": "latest",
     "vite-plugin-dts": "^1.4.0",
-    "vitepress": "latest"
+    "vitepress": "latest",
+    "vue": "latest"
   }
 }

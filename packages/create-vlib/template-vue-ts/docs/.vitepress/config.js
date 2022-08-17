@@ -8,7 +8,7 @@ import { resolve } from 'path';
 export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
-  base: process.env.NODE_ENV === 'production' ? '/ruabick' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/@{projectName}' : '/',
   locales: {
     '/': {
       lang: 'zh-CN',
