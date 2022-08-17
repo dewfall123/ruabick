@@ -39,7 +39,7 @@ const toggleExpand = () => (expand.value = !expand.value);
 <template>
   <ClientOnly>
     <article v-bind="$attrs" class="vitepress-demo">
-      <div class="demo-slot">
+      <div class="demo-slot vp-raw">
         <slot></slot>
       </div>
 

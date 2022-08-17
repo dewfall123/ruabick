@@ -25,9 +25,8 @@
   "dependencies": {
     "@ruabick/utils": "workspace:^0.2.0",
     "fs-extra": "^10.1.0",
-    "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "vitepress": "1.0.0-alpha.5"
+    "vitepress": "1.0.0-alpha.8"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

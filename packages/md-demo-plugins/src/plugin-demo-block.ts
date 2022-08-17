@@ -4,29 +4,26 @@ import { parseProps } from '@ruabick/utils';
 import { DemoTag } from './constants';
 import { getDemoComponent } from './utils';
 import fsExtra from 'fs-extra';
-import matter from 'gray-matter';
 
 export function demoBlockPlugin(md: MarkdownRenderer) {
   const defaultRender = md.renderer.rules.html_block;
 
-  md.renderer.rules.html_block = (tokens, idx, ...args) => {
+  md.renderer.rules.html_block = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
     const content = token.content.trim();
 
     if (!content.startsWith(`<${DemoTag} `)) {
-      return defaultRender!(tokens, idx, ...args);
+      return defaultRender!(tokens, idx, options, env, self);
     }
 
     const props = parseProps(content);
 
     if (!props.src) {
       console.error(`miss src props in ${md.__path} demo.`);
-      return defaultRender!(tokens, idx, ...args);
+      return defaultRender!(tokens, idx, options, env, self);
     }
 
-    // TODO issue  get frontmatter from md.__frontmatter
-    const mdContent = fsExtra.readFileSync(md.__path);
-    const { data: frontmatter } = matter(mdContent);
+    const frontmatter = env.frontmatter;
 
     const mdDir = dirname(frontmatter.realPath ?? md.__path);
     const srcPath = resolve(mdDir, props.src);
