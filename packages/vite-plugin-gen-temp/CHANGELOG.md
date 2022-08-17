@@ -1,5 +1,13 @@
 # @ruabick/vite-plugin-gen-temp
 
+## 0.2.1
+
+### Patch Changes
+
+- 5a61563: add --srcDir args
+- Updated dependencies [5a61563]
+  - @ruabick/utils@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes

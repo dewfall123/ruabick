@@ -1,5 +1,11 @@
 # @ruabick/vitepress-demo-block
 
+## 0.2.1
+
+### Patch Changes
+
+- 5a61563: add --srcDir args
+
 ## 0.2.0
 
 ### Minor Changes
