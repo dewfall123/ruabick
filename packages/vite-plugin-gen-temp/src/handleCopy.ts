@@ -47,21 +47,20 @@ async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
 
   const realPath = path;
   let finnalPath;
+  let mappingPath = frontmatter.mapping?.path ?? frontmatter.map?.path;
 
-  if (frontmatter.map?.path) {
-    let mappedPath = frontmatter.map?.path;
-
-    if (!mappedPath.endsWith('.md')) {
-      mappedPath = join(mappedPath, basename(path));
+  if (mappingPath) {
+    if (!mappingPath.endsWith('.md')) {
+      mappingPath = join(mappingPath, basename(path));
     }
 
-    const tempPath = join(tempDir, mappedPath);
+    const tempPath = join(tempDir, mappingPath);
     if (fsExtra.existsSync(tempPath)) {
       throw new Error(
-        `Trying to copy file:${path} to ${tempPath}, but file:${tempPath} already exists.`,
+        `${LOG_PREFIX} Trying to copy file:${path} to ${tempPath}, but file:${tempPath} already exists.`,
       );
     }
-    finnalPath = mappedPath;
+    finnalPath = mappingPath;
   } else {
     finnalPath = path.replace(new RegExp(`^${dir}`), '');
   }

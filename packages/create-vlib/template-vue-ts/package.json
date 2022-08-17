@@ -14,7 +14,7 @@
     "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
-    "dev": "initial-scan && vitepress dev .docs --host",
+    "dev": "initial-scan docs && vitepress dev .docs --host",
     "build": "vite build",
     "site:build": "cross-env NODE_ENV=production vitepress build .docs",
     "serve": "vitepress serve .docs --host",

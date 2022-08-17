@@ -14,7 +14,7 @@ async function genTempDocs(root: string, inputOptions: Options) {
     ...inputOptions,
   };
 
-  const localeConfigs = await resolveLocaleConfigs(options.docsDir);
+  const localeConfigs = await resolveLocaleConfigs(root);
 
   if (options.initial) {
     await fsExtra.remove(options.tempDir);
@@ -28,7 +28,7 @@ async function genTempDocs(root: string, inputOptions: Options) {
   ]);
 
   if (options.initial) {
-    console.log(`${cyan('Initial scan complete.')}`);
+    console.log(`${LOG_PREFIX} ${cyan('Initial scan complete.')}`);
     process.exit(0);
   } else {
     console.warn(
@@ -43,7 +43,7 @@ export async function initialScan() {
   const argv: any = minimist(process.argv.slice(2));
 
   const root = argv._[0];
-  genTempDocs(root, { initial: true });
+  genTempDocs(root, { initial: true, srcDir: argv.srcDir });
 }
 
 // vite-plugin
