@@ -21,7 +21,7 @@ async function genTempDocs(root: string, inputOptions: Options) {
     console.log(`${LOG_PREFIX} remove ${options.tempDir}.`);
   }
 
-  console.log(`${LOG_PREFIX} start generate ${options.tempDir}...`);
+  console.log(`${LOG_PREFIX} ${cyan(`Start generate ${options.tempDir}...`)}`);
   await Promise.all([
     copyDocs(options, localeConfigs),
     copySrcMd(options, localeConfigs),
@@ -43,7 +43,10 @@ export async function initialScan() {
   const argv: any = minimist(process.argv.slice(2));
 
   const root = argv._[0];
-  genTempDocs(root, { initial: true, srcDir: argv.srcDir });
+  genTempDocs(root, {
+    initial: true,
+    srcDir: argv.srcDir ?? DefaultOptions.srcDir,
+  });
 }
 
 // vite-plugin

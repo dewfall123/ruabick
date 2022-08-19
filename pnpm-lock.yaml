@@ -174,12 +174,13 @@ importers:
 
   packages/vite-plugin-gen-temp:
     specifiers:
-      '@ruabick/utils': workspace:^0.2.0
+      '@ruabick/utils': workspace:^0.2.1
       '@types/fs-extra': ^9.0.13
       '@types/is-plain-object': ^2.0.4
       '@types/minimist': ^1.2.2
       chokidar: ^3.5.3
       colorette: ^2.0.19
+      fast-glob: ^3.2.11
       fs-extra: ^10.1.0
       globby: ^13.1.2
       gray-matter: ^4.0.3
@@ -194,6 +195,7 @@ importers:
       '@ruabick/utils': link:../utils
       chokidar: 3.5.3
       colorette: 2.0.19
+      fast-glob: 3.2.11
       fs-extra: 10.1.0
       globby: 13.1.2
       gray-matter: 4.0.3

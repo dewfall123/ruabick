@@ -3,6 +3,7 @@ import chokidar from 'chokidar';
 import { handleCopy } from './handleCopy';
 import { Options } from './types';
 import { removeFile } from './utils';
+import fg from 'fast-glob';
 
 export async function copyDocs(
   options: Required<Options>,
@@ -10,13 +11,17 @@ export async function copyDocs(
 ) {
   const { docsDir, initial } = options;
 
-  const tasks: Promise<any>[] = [];
-  const copyFile = async (file: string) =>
-    tasks.push(handleCopy(docsDir, file, { options, localeConfigs }));
+  const globSource = `${docsDir}/**`;
 
-  return new Promise((resolve) => {
+  const copyFile = (file: string) =>
+    handleCopy(docsDir, file, { options, localeConfigs });
+
+  if (initial) {
+    const files = await fg(globSource, { dot: true, cwd: process.cwd() });
+    await Promise.all(files.map(copyFile));
+  } else {
     chokidar
-      .watch(`${docsDir}/**`, {
+      .watch(globSource, {
         cwd: process.cwd(),
         ignored: [],
         ignoreInitial: !initial,
@@ -24,10 +29,6 @@ export async function copyDocs(
       })
       .on('change', copyFile)
       .on('add', copyFile)
-      .on('unlink', (file) => removeFile(file))
-      .on('ready', async () => {
-        await Promise.all(tasks);
-        resolve(true);
-      });
-  });
+      .on('unlink', (file) => removeFile(file));
+  }
 }

@@ -39,6 +39,7 @@
     "@ruabick/utils": "workspace:^0.2.1",
     "chokidar": "^3.5.3",
     "colorette": "^2.0.19",
+    "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "globby": "^13.1.2",
     "gray-matter": "^4.0.3",
