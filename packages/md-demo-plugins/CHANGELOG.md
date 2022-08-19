@@ -1,5 +1,13 @@
 # @ruabick/md-demo-plugins
 
+## 0.2.2
+
+### Patch Changes
+
+- fix initial scan error
+- Updated dependencies
+  - @ruabick/utils@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes

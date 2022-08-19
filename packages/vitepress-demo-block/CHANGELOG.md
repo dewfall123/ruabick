@@ -1,5 +1,11 @@
 # @ruabick/vitepress-demo-block
 
+## 0.2.2
+
+### Patch Changes
+
+- fix initial scan error
+
 ## 0.2.1
 
 ### Patch Changes

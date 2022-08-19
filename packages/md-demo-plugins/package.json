@@ -1,6 +1,6 @@
 {
   "name": "@ruabick/md-demo-plugins",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "bin": {},
   "files": [
@@ -23,7 +23,7 @@
   "keywords": [],
   "author": "dewfall123",
   "dependencies": {
-    "@ruabick/utils": "workspace:^0.2.1",
+    "@ruabick/utils": "workspace:^0.2.2",
     "fs-extra": "^10.1.0",
     "markdown-it": "^13.0.1",
     "vitepress": "1.0.0-alpha.8"
