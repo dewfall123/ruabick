@@ -1,5 +1,11 @@
 # @ruabick/doc-site
 
+## 0.2.3
+
+### Patch Changes
+
+- add ts library template
+
 ## 0.2.2
 
 ### Patch Changes

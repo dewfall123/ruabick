@@ -5,11 +5,12 @@ import { fileURLToPath } from 'node:url';
 import { Meta } from '../prompt';
 
 export async function generator(meta: Meta) {
+  console.log(meta.template);
   const templateDir = resolve(
     // @ts-ignore
     fileURLToPath(import.meta.url),
     '../..',
-    `template-vue-ts`,
+    meta.template,
   );
 
   return new Promise((resolve, reject) => {

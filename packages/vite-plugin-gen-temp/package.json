@@ -1,6 +1,6 @@
 {
   "name": "@ruabick/vite-plugin-gen-temp",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "license": "MIT",
   "bin": {
@@ -36,7 +36,7 @@
     "unbuild": "^0.7.6"
   },
   "dependencies": {
-    "@ruabick/utils": "workspace:^0.2.2",
+    "@ruabick/utils": "workspace:^0.2.3",
     "chokidar": "^3.5.3",
     "colorette": "^2.0.19",
     "fast-glob": "^3.2.11",

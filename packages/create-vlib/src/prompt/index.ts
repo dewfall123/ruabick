@@ -5,7 +5,7 @@ export interface Meta {
   projectName: string;
   description: string;
   user: string;
-  // template: string;
+  template: string;
 }
 
 export async function prompt(targetDir: string) {
@@ -21,6 +21,21 @@ export async function prompt(targetDir: string) {
       onState: (state: any) => {
         targetDir = formatTargetDir(state.value) || defaultTargetDir;
       },
+    },
+    {
+      name: 'template',
+      type: 'list',
+      message: 'Please select a template.',
+      choices: [
+        {
+          name: 'vue-ts-components',
+          value: 'template-vue-ts',
+        },
+        {
+          name: 'ts-library',
+          value: 'template-ts',
+        },
+      ],
     },
     {
       name: 'description',

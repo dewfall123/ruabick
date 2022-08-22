@@ -1,5 +1,13 @@
 # @ruabick/vite-plugin-gen-api-doc
 
+## 0.2.3
+
+### Patch Changes
+
+- add ts library template
+- Updated dependencies
+  - @ruabick/utils@0.2.3
+
 ## 0.2.2
 
 ### Patch Changes
