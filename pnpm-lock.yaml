@@ -87,14 +87,14 @@ importers:
 
   packages/doc-site:
     specifiers:
-      '@ruabick/md-demo-plugins': workspace:^0.2.0
-      '@ruabick/vite-plugin-gen-api-doc': workspace:^0.2.0
-      '@ruabick/vite-plugin-gen-temp': workspace:^0.2.0
-      '@ruabick/vitepress-demo-block': workspace:^0.2.0
+      '@ruabick/md-demo-plugins': workspace:^0.2.3
+      '@ruabick/vite-plugin-gen-api-doc': workspace:^0.2.3
+      '@ruabick/vite-plugin-gen-temp': workspace:^0.2.3
+      '@ruabick/vitepress-demo-block': workspace:^0.2.3
       cross-env: ^7.0.3
       gh-pages: ^4.0.0
       vite: ^3.0.2
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
       vue: ^3.2.37
       vue-typical: ^2.1.0
     devDependencies:
@@ -105,24 +105,24 @@ importers:
       cross-env: 7.0.3
       gh-pages: 4.0.0
       vite: 3.0.2
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
       vue: 3.2.37
       vue-typical: 2.1.0
 
   packages/md-demo-plugins:
     specifiers:
-      '@ruabick/utils': workspace:^0.2.0
+      '@ruabick/utils': workspace:^0.2.3
       '@types/fs-extra': ^9.0.13
       '@types/markdown-it': ^12.2.3
       fs-extra: ^10.1.0
       markdown-it: ^13.0.1
       unbuild: ^0.7.6
-      vitepress: latest
+      vitepress: 1.0.0-alpha.10
     dependencies:
       '@ruabick/utils': link:../utils
       fs-extra: 10.1.0
       markdown-it: 13.0.1
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
     devDependencies:
       '@types/fs-extra': 9.0.13
       '@types/markdown-it': 12.2.3
@@ -132,17 +132,17 @@ importers:
     specifiers:
       '@vue/compiler-core': ^3.2.37
       unbuild: ^0.7.6
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
     dependencies:
       '@vue/compiler-core': 3.2.37
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
     devDependencies:
       unbuild: 0.7.6
 
   packages/vite-plugin-gen-api-doc:
     specifiers:
       '@babel/parser': ^7.18.11
-      '@ruabick/utils': workspace:^0.2.0
+      '@ruabick/utils': workspace:^0.2.3
       '@types/markdown-it': ^12.2.3
       '@vue/compiler-core': ^3.2.37
       chalk: ^5.0.1
@@ -153,7 +153,7 @@ importers:
       ts-morph: ^15.1.0
       unbuild: ^0.7.6
       vite: ^3.0.5
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
       vue-docgen-api: ^4.50.0
     dependencies:
       '@babel/parser': 7.18.11
@@ -165,7 +165,7 @@ importers:
       gray-matter: 4.0.3
       markdown-it: 13.0.1
       ts-morph: 15.1.0
-      vitepress: 1.0.0-alpha.8
+      vitepress: 1.0.0-alpha.10
       vue-docgen-api: 4.50.0
     devDependencies:
       '@types/markdown-it': 12.2.3
@@ -174,7 +174,7 @@ importers:
 
   packages/vite-plugin-gen-temp:
     specifiers:
-      '@ruabick/utils': workspace:^0.2.1
+      '@ruabick/utils': workspace:^0.2.3
       '@types/fs-extra': ^9.0.13
       '@types/is-plain-object': ^2.0.4
       '@types/minimist': ^1.2.2
@@ -712,7 +712,7 @@ packages:
     resolution: {integrity: sha512-H1PekEtSeS0msetR2YGGey2w7jQ2wAKfGODJvQTygSwMgUZ+2DHpzUgeDyEBIXRIfaBcoQneqrzsljM62pm6Xg==}
     dependencies:
       '@docsearch/react': 3.2.1
-      preact: 10.10.3
+      preact: 10.10.6
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -1417,14 +1417,14 @@ packages:
       vue: 3.2.37
     dev: true
 
-  /@vitejs/plugin-vue/3.0.3_vite@3.0.8+vue@3.2.37:
+  /@vitejs/plugin-vue/3.0.3_vite@3.0.9+vue@3.2.37:
     resolution: {integrity: sha512-U4zNBlz9mg+TA+i+5QPc3N5lQvdUXENZLO2h0Wdzp56gI1MWhqJOv+6R+d4kOzoaSSq6TnGPBdZAXKOe4lXy6g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.0.8
+      vite: 3.0.9
       vue: 3.2.37
 
   /@vue/compiler-core/3.2.37:
@@ -1503,24 +1503,24 @@ packages:
   /@vue/shared/3.2.37:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
 
-  /@vueuse/core/9.1.0_vue@3.2.37:
-    resolution: {integrity: sha512-BIroqvXEqt826aE9r3K5cox1zobuPuAzdYJ36kouC2TVhlXvFKIILgFVWrpp9HZPwB3aLzasmG3K87q7TSyXZg==}
+  /@vueuse/core/9.1.1_vue@3.2.37:
+    resolution: {integrity: sha512-QfuaNWRDMQcCUwXylCyYhPC3ScS9Tiiz4J0chdwr3vOemBwRToSywq8MP+ZegKYFnbETzRY8G/5zC+ca30wrRQ==}
     dependencies:
       '@types/web-bluetooth': 0.0.15
-      '@vueuse/metadata': 9.1.0
-      '@vueuse/shared': 9.1.0_vue@3.2.37
-      vue-demi: 0.13.8_vue@3.2.37
+      '@vueuse/metadata': 9.1.1
+      '@vueuse/shared': 9.1.1_vue@3.2.37
+      vue-demi: 0.13.9_vue@3.2.37
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
 
-  /@vueuse/metadata/9.1.0:
-    resolution: {integrity: sha512-8OEhlog1iaAGTD3LICZ8oBGQdYeMwByvXetOtAOZCJOzyCRSwqwdggTsmVZZ1rkgYIEqgUBk942AsAPwM21s6A==}
+  /@vueuse/metadata/9.1.1:
+    resolution: {integrity: sha512-XZ2KtSW+85LLHB/IdGILPAtbIVHasPsAW7aqz3BRMzJdAQWRiM/FGa1OKBwLbXtUw/AmjKYFlZJo7eOFIBXRog==}
 
-  /@vueuse/shared/9.1.0_vue@3.2.37:
-    resolution: {integrity: sha512-pB/3njQu4tfJJ78ajELNda0yMG6lKfpToQW7Soe09CprF1k3QuyoNi1tBNvo75wBDJWD+LOnr+c4B5HZ39jY/Q==}
+  /@vueuse/shared/9.1.1_vue@3.2.37:
+    resolution: {integrity: sha512-c+IfcOYmHiHqoEa3ED1Tbpue5GHmoUmTp8PtO4YbczthtY155Rt6DmWhjxMLXBF1Bcidagxljmp/7xtAzEHXLw==}
     dependencies:
-      vue-demi: 0.13.8_vue@3.2.37
+      vue-demi: 0.13.9_vue@3.2.37
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6509,8 +6509,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact/10.10.3:
-    resolution: {integrity: sha512-Gwwh0o531izatQQZu0yEX4mtfxVYsZJ4TT/o2VK3UZ/UuAWAWFnzsEfpZvad32vY3TKoRnSY2WqiDz2rH/viWQ==}
+  /preact/10.10.6:
+    resolution: {integrity: sha512-w0mCL5vICUAZrh1DuHEdOWBjxdO62lvcO++jbzr8UhhYcTbFkpegLH9XX+7MadjTl/y0feoqwQ/zAnzkc/EGog==}
 
   /preferred-pm/3.0.3:
     resolution: {integrity: sha1-G2M4AANx4+285S7y5PZesuc1htY=}
@@ -8348,8 +8348,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/3.0.8:
-    resolution: {integrity: sha512-AOZ4eN7mrkJiOLuw8IA7piS4IdOQyQCA81GxGsAQvAZzMRi9ZwGB3TOaYsj4uLAWK46T5L4AfQ6InNGlxX30IQ==}
+  /vite/3.0.9:
+    resolution: {integrity: sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -8374,18 +8374,18 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitepress/1.0.0-alpha.8:
-    resolution: {integrity: sha512-kTRN5DCagvMqr9OjylSV9/waGg0IHrxL0hBVuJoz7ykleZq2qR02n5CaiFq5QrSB/VRBGqiVsFQzet9vJsXS8g==}
+  /vitepress/1.0.0-alpha.10:
+    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1
       '@docsearch/js': 3.2.1
-      '@vitejs/plugin-vue': 3.0.3_vite@3.0.8+vue@3.2.37
+      '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
       '@vue/devtools-api': 6.2.1
-      '@vueuse/core': 9.1.0_vue@3.2.37
+      '@vueuse/core': 9.1.1_vue@3.2.37
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.11.1
-      vite: 3.0.8
+      vite: 3.0.9
       vue: 3.2.37
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -8409,8 +8409,8 @@ packages:
   /vscode-textmate/6.0.0:
     resolution: {integrity: sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==}
 
-  /vue-demi/0.13.8_vue@3.2.37:
-    resolution: {integrity: sha512-Vy1zbZhCOdsmvGR6tJhAvO5vhP7eiS8xkbYQSoVa7o6KlIy3W8Rc53ED4qI4qpeRDjv3mLfXSEpYU6Yq4pgXRg==}
+  /vue-demi/0.13.9_vue@3.2.37:
+    resolution: {integrity: sha512-+4hVlCaBMsX5O3cbYA8xyLAK6jFJVWhmHHmyYTFRkwPhGvyxJbBUfizZiuXCdmDnrGjj7k2n1mhHJ2JvT4JTtA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true

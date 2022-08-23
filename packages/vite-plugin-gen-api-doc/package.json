@@ -28,7 +28,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "ts-morph": "^15.1.0",
-    "vitepress": "1.0.0-alpha.8",
+    "vitepress": "1.0.0-alpha.10",
     "vue-docgen-api": "^4.50.0"
   },
   "devDependencies": {
