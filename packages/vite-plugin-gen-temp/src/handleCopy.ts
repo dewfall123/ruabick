@@ -1,4 +1,4 @@
-import { yellow, dim, green } from 'colorette';
+import { yellow, dim, green, red } from 'colorette';
 import { basename, dirname, extname, join } from 'path';
 import { Options } from './types';
 import matter from 'gray-matter';
@@ -22,6 +22,9 @@ export async function handleCopy(
   let destPath;
   if (!path.endsWith('.md')) {
     destPath = join(tempDir, path.replace(new RegExp(`^${dir}`), ''));
+    if (!(await checkDestFileExist(path, destPath))) {
+      return;
+    }
     await fsExtra.copy(path, destPath);
   } else {
     const { finnalPath, finnalContent } = await resolveFrontmatter(
@@ -33,12 +36,29 @@ export async function handleCopy(
     const fileInLangDir = handleLangSuffix(finnalPath, localeConfigs);
 
     destPath = join(tempDir, fileInLangDir);
+    if (!(await checkDestFileExist(path, destPath))) {
+      return;
+    }
     await fsExtra.ensureFile(destPath);
     await fsExtra.writeFile(destPath, finnalContent);
   }
 
   console.log(`${LOG_PREFIX} ${green('copy')} ${path} → ${destPath}`);
 }
+
+const checkDestFileExist = async (path: string, destPath) => {
+  const exist = await fsExtra.pathExists(destPath);
+  if (exist) {
+    console.error(
+      `${LOG_PREFIX} Error: ${red(
+        `Trying to copy "${yellow(path)}" to "${yellow(
+          destPath,
+        )}", but "${yellow(destPath)}" already exists.`,
+      )}`,
+    );
+  }
+  return !exist;
+};
 
 async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
   // TODO cache it
@@ -52,13 +72,6 @@ async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
   if (mappingPath) {
     if (!mappingPath.endsWith('.md')) {
       mappingPath = join(mappingPath, basename(path));
-    }
-
-    const tempPath = join(tempDir, mappingPath);
-    if (fsExtra.existsSync(tempPath)) {
-      throw new Error(
-        `${LOG_PREFIX} Trying to copy file:${path} to ${tempPath}, but file:${tempPath} already exists.`,
-      );
     }
     finnalPath = mappingPath;
   } else {
