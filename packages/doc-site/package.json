@@ -1,7 +1,7 @@
 {
   "name": "@ruabick/doc-site",
   "private": true,
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,10 +15,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@ruabick/md-demo-plugins": "workspace:^0.2.3",
-    "@ruabick/vite-plugin-gen-api-doc": "workspace:^0.2.3",
-    "@ruabick/vite-plugin-gen-temp": "workspace:^0.2.3",
-    "@ruabick/vitepress-demo-block": "workspace:^0.2.3",
+    "@ruabick/md-demo-plugins": "workspace:^0.2.4",
+    "@ruabick/vite-plugin-gen-api-doc": "workspace:^0.2.4",
+    "@ruabick/vite-plugin-gen-temp": "workspace:^0.2.4",
+    "@ruabick/vitepress-demo-block": "workspace:^0.2.4",
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0",
     "vite": "^3.0.2",

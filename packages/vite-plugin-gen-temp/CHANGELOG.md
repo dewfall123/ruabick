@@ -1,5 +1,13 @@
 # @ruabick/vite-plugin-gen-temp
 
+## 0.2.4
+
+### Patch Changes
+
+- v0.2.4
+- Updated dependencies
+  - @ruabick/utils@0.2.4
+
 ## 0.2.3
 
 ### Patch Changes
