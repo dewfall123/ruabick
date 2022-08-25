@@ -22,9 +22,6 @@ export async function handleCopy(
   let destPath;
   if (!path.endsWith('.md')) {
     destPath = join(tempDir, path.replace(new RegExp(`^${dir}`), ''));
-    if (!(await checkDestFileExist(path, destPath))) {
-      return;
-    }
     await fsExtra.copy(path, destPath);
   } else {
     const { finnalPath, finnalContent } = await resolveFrontmatter(
@@ -36,9 +33,7 @@ export async function handleCopy(
     const fileInLangDir = handleLangSuffix(finnalPath, localeConfigs);
 
     destPath = join(tempDir, fileInLangDir);
-    if (!(await checkDestFileExist(path, destPath))) {
-      return;
-    }
+
     await fsExtra.ensureFile(destPath);
     await fsExtra.writeFile(destPath, finnalContent);
   }
