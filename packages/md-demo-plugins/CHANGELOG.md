@@ -1,5 +1,13 @@
 # @ruabick/md-demo-plugins
 
+## 0.2.6
+
+### Patch Changes
+
+- support monorepo
+- Updated dependencies
+  - @ruabick/utils@0.2.6
+
 ## 0.2.5
 
 ### Patch Changes
