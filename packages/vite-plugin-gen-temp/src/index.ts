@@ -50,11 +50,12 @@ export async function initialScan() {
 }
 
 // vite-plugin
-export function genTemp() {
+export function genTemp(options: Options) {
+  const { srcDir = 'src', ...rest } = options ?? {};
   return {
     name: 'vite-plugin-gen-temp',
     config: async (config: any) => {
-      await genTempDocs(config.root, { initial: false });
+      await genTempDocs(config.root, { ...rest, initial: false, srcDir });
     },
   };
 }

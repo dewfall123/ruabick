@@ -87,14 +87,14 @@ importers:
 
   packages/doc-site:
     specifiers:
-      '@ruabick/md-demo-plugins': workspace:^0.2.3
-      '@ruabick/vite-plugin-gen-api-doc': workspace:^0.2.3
-      '@ruabick/vite-plugin-gen-temp': workspace:^0.2.3
-      '@ruabick/vitepress-demo-block': workspace:^0.2.3
+      '@ruabick/md-demo-plugins': workspace:^0.2.6
+      '@ruabick/vite-plugin-gen-api-doc': workspace:^0.2.6
+      '@ruabick/vite-plugin-gen-temp': workspace:^0.2.6
+      '@ruabick/vitepress-demo-block': workspace:^0.2.6
       cross-env: ^7.0.3
       gh-pages: ^4.0.0
       vite: ^3.0.2
-      vitepress: 1.0.0-alpha.10
+      vitepress: latest
       vue: ^3.2.37
       vue-typical: ^2.1.0
     devDependencies:
@@ -105,24 +105,24 @@ importers:
       cross-env: 7.0.3
       gh-pages: 4.0.0
       vite: 3.0.2
-      vitepress: 1.0.0-alpha.10
+      vitepress: 1.0.0-alpha.13
       vue: 3.2.37
       vue-typical: 2.1.0
 
   packages/md-demo-plugins:
     specifiers:
-      '@ruabick/utils': workspace:^0.2.3
+      '@ruabick/utils': workspace:^0.2.6
       '@types/fs-extra': ^9.0.13
       '@types/markdown-it': ^12.2.3
       fs-extra: ^10.1.0
       markdown-it: ^13.0.1
       unbuild: ^0.7.6
-      vitepress: 1.0.0-alpha.10
+      vitepress: latest
     dependencies:
       '@ruabick/utils': link:../utils
       fs-extra: 10.1.0
       markdown-it: 13.0.1
-      vitepress: 1.0.0-alpha.10
+      vitepress: 1.0.0-alpha.13
     devDependencies:
       '@types/fs-extra': 9.0.13
       '@types/markdown-it': 12.2.3
@@ -132,17 +132,17 @@ importers:
     specifiers:
       '@vue/compiler-core': ^3.2.37
       unbuild: ^0.7.6
-      vitepress: 1.0.0-alpha.10
+      vitepress: latest
     dependencies:
       '@vue/compiler-core': 3.2.37
-      vitepress: 1.0.0-alpha.10
+      vitepress: 1.0.0-alpha.13
     devDependencies:
       unbuild: 0.7.6
 
   packages/vite-plugin-gen-api-doc:
     specifiers:
       '@babel/parser': ^7.18.11
-      '@ruabick/utils': workspace:^0.2.3
+      '@ruabick/utils': workspace:^0.2.6
       '@types/markdown-it': ^12.2.3
       '@vue/compiler-core': ^3.2.37
       chalk: ^5.0.1
@@ -153,7 +153,7 @@ importers:
       ts-morph: ^15.1.0
       unbuild: ^0.7.6
       vite: ^3.0.5
-      vitepress: 1.0.0-alpha.10
+      vitepress: latest
       vue-docgen-api: ^4.50.0
     dependencies:
       '@babel/parser': 7.18.11
@@ -165,7 +165,7 @@ importers:
       gray-matter: 4.0.3
       markdown-it: 13.0.1
       ts-morph: 15.1.0
-      vitepress: 1.0.0-alpha.10
+      vitepress: 1.0.0-alpha.13
       vue-docgen-api: 4.50.0
     devDependencies:
       '@types/markdown-it': 12.2.3
@@ -174,7 +174,7 @@ importers:
 
   packages/vite-plugin-gen-temp:
     specifiers:
-      '@ruabick/utils': workspace:^0.2.3
+      '@ruabick/utils': workspace:^0.2.6
       '@types/fs-extra': ^9.0.13
       '@types/is-plain-object': ^2.0.4
       '@types/minimist': ^1.2.2
@@ -8374,8 +8374,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitepress/1.0.0-alpha.10:
-    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
+  /vitepress/1.0.0-alpha.13:
+    resolution: {integrity: sha512-gCbKb+6o0g5wHt2yyqBPk7FcvrB+MfwGtg1JMS5p99GTQR87l3b7symCl8o1ecv7MDXwJ2mPB8ZrYNLnQAJxLQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1

@@ -35,7 +35,10 @@ export async function handleCopy(
     destPath = join(tempDir, fileInLangDir);
 
     await fsExtra.ensureFile(destPath);
-    await fsExtra.writeFile(destPath, finnalContent);
+    await fsExtra.writeFile(destPath, finnalContent, {
+      flag: 'w',
+      encoding: 'utf9',
+    });
   }
 
   console.log(`${LOG_PREFIX} ${green('copy')} ${path} → ${destPath}`);
