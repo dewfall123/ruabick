@@ -56,6 +56,7 @@ export default (filePath: string) => {
         displayName: interfaceDeclaration.getName(),
         exportName: interfaceDeclaration.getName(),
         props: formatterProps(properties),
+        tags: {},
       };
 
       if (componentDoc.props.length) {

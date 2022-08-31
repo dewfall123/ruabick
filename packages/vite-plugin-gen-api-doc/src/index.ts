@@ -8,7 +8,8 @@ import MarkdownIt from 'markdown-it';
 import matter from 'gray-matter';
 import { dirname, resolve } from 'node:path';
 import { getApiTmpl } from './getApiTmpl';
-import { parse } from 'vue-docgen-api';
+import { parse as parseVue } from 'vue-docgen-api';
+import parseInterface from './utils/parse-interface';
 
 const API_REG = /^<API (.*)(<\/API>|\/>)$/;
 const LOG_PREFIX = '[ruabick:gen-doc-api]';
@@ -73,9 +74,11 @@ async function getApiMarkdown(
 
   const srcPath = resolve(baseDir, props.src);
 
-  const componentDoc = await parse(srcPath);
+  const componentDoc = srcPath.endsWith('.vue')
+    ? await parseVue(srcPath)
+    : await parseInterface(srcPath);
 
   const apiMdContents = await getApiTmpl(componentDoc, 'component', lang);
 
-  return apiMdContents || `${componentDoc.displayName}'s api is empty!`;
+  return apiMdContents || `${srcPath}'s api is empty!`;
 }
