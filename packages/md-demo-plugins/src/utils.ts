@@ -12,13 +12,14 @@ const scriptClientRE = /<\s*script[^>]*\bclient\b[^>]*/;
 let index = 1;
 export function getDemoComponent(
   md: MarkdownRenderer,
+  env: any, // TODO
   { title, desc, path, code }: DemoInfos,
 ) {
   const componentName = `DemoComponent${index++}`;
 
   path = normalizePath(path);
 
-  injectImportStatement(md, componentName, path);
+  injectImportStatement(env, componentName, path);
 
   const highlightedCode = md.options.highlight!(code, 'vue', '');
   return `
@@ -37,6 +38,7 @@ export function getDemoComponent(
 let fenceIndex = 1;
 export function genDemoByCode(
   md: MarkdownRenderer,
+  env: any,
   path: string,
   code: string,
 ) {
@@ -54,24 +56,24 @@ export function genDemoByCode(
   fsExtra.createFileSync(demoPath);
   fsExtra.writeFileSync(demoPath, code);
 
-  return getDemoComponent(md, {
+  return getDemoComponent(md, env, {
     path: demoPath,
     code,
   });
 }
 
 function injectImportStatement(
-  md: MarkdownRenderer,
+  env: any, // TODO this should import from vitepress
   componentName: string,
   path: string,
 ) {
   const componentRegistStatement =
     `import ${componentName} from '${path}'`.trim();
 
-  if (!md.__data.hoistedTags) {
-    md.__data.hoistedTags = [];
+  if (!env.sfcBlocks.scripts) {
+    env.sfcBlocks.scripts = [];
   }
-  const tags = md.__data.hoistedTags;
+  const tags = env.sfcBlocks.scripts;
 
   const isUsingTS = tags.findIndex((tag) => scriptLangTsRE.test(tag)) > -1;
   const existingSetupScriptIndex = tags?.findIndex((tag) => {
@@ -89,13 +91,13 @@ function injectImportStatement(
       </script>`,
     );
   } else {
-    tags.unshift(
-      `
+    tags.unshift({
+      content: `
         <script ${isUsingTS ? 'lang="ts"' : ''} setup >
           ${componentRegistStatement}
         </script>
       `.trim(),
-    );
+    });
   }
 }
 

@@ -17,20 +17,22 @@ export function demoBlockPlugin(md: MarkdownRenderer) {
         return defaultRender!(tokens, idx, options, env, self);
       }
 
+      const { path } = env;
+
       const props = parseProps(content);
 
       if (!props.src) {
-        console.error(`miss src props in ${md.__path} demo.`);
+        console.error(`miss src props in ${path} demo.`);
         return defaultRender!(tokens, idx, options, env, self);
       }
 
       const frontmatter = env.frontmatter;
 
-      const mdDir = dirname(frontmatter.realPath ?? md.__path);
+      const mdDir = dirname(frontmatter.realPath ?? path);
       const srcPath = resolve(mdDir, props.src);
       const code = fsExtra.readFileSync(srcPath, 'utf-8');
 
-      const demoScripts = getDemoComponent(md, {
+      const demoScripts = getDemoComponent(md, env, {
         title: props.title,
         desc: props.desc,
         path: srcPath,
