@@ -1,5 +1,13 @@
 # @ruabick/vite-plugin-gen-api-doc
 
+## 0.2.7
+
+### Patch Changes
+
+- 0.2.7
+- Updated dependencies
+  - @ruabick/utils@0.2.7
+
 ## 0.2.6
 
 ### Patch Changes

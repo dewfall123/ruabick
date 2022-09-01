@@ -1,6 +1,6 @@
 {
   "name": "@ruabick/create-vlib",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "@ruabick's cli",
   "files": [
     "dist",
