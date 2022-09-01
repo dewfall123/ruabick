@@ -85,11 +85,14 @@ async function resolveFrontmatter(path: string, tempDir: string, dir: string) {
 }
 
 function handleLangSuffix(path: string, localeConfigs: LocaleConfigs) {
+  const { defaultLang, langToPathMap } = localeConfigs;
+  if (!Object.keys(langToPathMap).length) {
+    return path;
+  }
+
   const fileName = basename(path);
   const dir = dirname(path);
   const fileNameWithoutMd = fileName.replace(/\.md$/, '');
-
-  const { defaultLang, langToPathMap } = localeConfigs;
 
   const fileExtname = extname(fileNameWithoutMd);
   const langSuffix = fileExtname.slice(1) || defaultLang;
