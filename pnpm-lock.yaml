@@ -178,7 +178,7 @@ importers:
 
   packages/vite-plugin-gen-temp:
     specifiers:
-      '@ruabick/utils': workspace:^0.2.6
+      '@ruabick/utils': workspace:^0.2.7
       '@types/fs-extra': ^9.0.13
       '@types/is-plain-object': ^2.0.4
       '@types/minimist': ^1.2.2
@@ -195,6 +195,7 @@ importers:
       rollup: ^2.77.0
       tsx: ^3.8.0
       unbuild: ^0.7.6
+      vitepress: 1.0.0-alpha.13
     dependencies:
       '@ruabick/utils': link:../utils
       chokidar: 3.5.3
@@ -205,6 +206,7 @@ importers:
       gray-matter: 4.0.3
       is-plain-object: 5.0.0
       minimist: 1.2.6
+      vitepress: 1.0.0-alpha.13
     devDependencies:
       '@types/fs-extra': 9.0.13
       '@types/is-plain-object': 2.0.4

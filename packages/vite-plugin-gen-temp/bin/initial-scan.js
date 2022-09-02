@@ -2,4 +2,8 @@
 
 const { initialScan } = require('../dist/index.cjs');
 
-initialScan();
+(async () => {
+  await initialScan();
+  process.argv[3] = '.docs';
+  require('vitepress/dist/node-cjs/cli.cjs');
+})();

@@ -44,6 +44,7 @@
     "globby": "^13.1.2",
     "gray-matter": "^4.0.3",
     "is-plain-object": "^5.0.0",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.6",
+    "vitepress": "1.0.0-alpha.13"
   }
 }

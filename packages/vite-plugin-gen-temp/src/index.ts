@@ -39,10 +39,9 @@ async function genTempDocs(root: string, inputOptions: Options) {
   }
 }
 
-export async function initialScan() {
+export async function initialScan(root: string) {
   const argv: any = minimist(process.argv.slice(2));
 
-  const root = argv._[0];
   genTempDocs(root, {
     initial: true,
     srcDir: argv.srcDir ?? DefaultOptions.srcDir,
