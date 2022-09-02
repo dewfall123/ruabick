@@ -73,18 +73,22 @@ function injectImportStatement(
   if (!env.sfcBlocks.scripts) {
     env.sfcBlocks.scripts = [];
   }
-  const tags = env.sfcBlocks.scripts;
+  // TODO type
+  const tags = env.sfcBlocks.scripts as { content: string }[];
 
-  const isUsingTS = tags.findIndex((tag) => scriptLangTsRE.test(tag)) > -1;
+  const isUsingTS =
+    tags.findIndex((tag) => scriptLangTsRE.test(tag.content)) > -1;
   const existingSetupScriptIndex = tags?.findIndex((tag) => {
     return (
-      scriptRE.test(tag) && scriptSetupRE.test(tag) && !scriptClientRE.test(tag)
+      scriptRE.test(tag.content) &&
+      scriptSetupRE.test(tag.content) &&
+      !scriptClientRE.test(tag.content)
     );
   });
 
   if (existingSetupScriptIndex > -1) {
     const tagSrc = tags[existingSetupScriptIndex];
-    tags[existingSetupScriptIndex] = tagSrc.replace(
+    tags[existingSetupScriptIndex].content = tagSrc.content.replace(
       scriptRE,
       `${componentRegistStatement}
 
