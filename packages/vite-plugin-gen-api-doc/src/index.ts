@@ -74,9 +74,10 @@ async function getApiMarkdown(
 
   const srcPath = resolve(baseDir, props.src);
 
-  const componentDoc = srcPath.endsWith('.vue')
-    ? await parseVue(srcPath)
-    : await parseInterface(srcPath);
+  const componentDoc =
+    srcPath.endsWith('.vue') || srcPath.endsWith('.tsx')
+      ? await parseVue(srcPath)
+      : await parseInterface(srcPath);
 
   const apiMdContents = await getApiTmpl(componentDoc, 'component', lang);
 
