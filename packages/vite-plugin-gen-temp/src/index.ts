@@ -29,7 +29,6 @@ async function genTempDocs(root: string, inputOptions: Options) {
 
   if (options.initial) {
     console.log(`${LOG_PREFIX} ${cyan('Initial scan complete.')}`);
-    process.exit(0);
   } else {
     console.warn(
       `${cyan(
@@ -42,7 +41,7 @@ async function genTempDocs(root: string, inputOptions: Options) {
 export async function initialScan(root: string) {
   const argv: any = minimist(process.argv.slice(2));
 
-  genTempDocs(root, {
+  await genTempDocs(root, {
     initial: true,
     srcDir: argv.srcDir ?? DefaultOptions.srcDir,
   });

@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "initial-scan dev docs --srcDir=src",
+    "dev": "initial-scan dev docs --srcDir=src --host",
     "site:dev": "vitepress dev .docs --host",
     "site:build": "cross-env NODE_ENV=production vitepress build .docs",
     "site:serve": "cross-env NODE_ENV=production vitepress serve .docs --host",
