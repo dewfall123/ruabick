@@ -1,5 +1,11 @@
 # @ruabick/vitepress-demo-block
 
+## 0.2.9
+
+### Patch Changes
+
+- fix #13
+
 ## 0.2.8
 
 ### Patch Changes

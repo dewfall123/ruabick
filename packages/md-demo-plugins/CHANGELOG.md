@@ -1,5 +1,13 @@
 # @ruabick/md-demo-plugins
 
+## 0.2.9
+
+### Patch Changes
+
+- fix #13
+- Updated dependencies
+  - @ruabick/utils@0.2.9
+
 ## 0.2.8
 
 ### Patch Changes

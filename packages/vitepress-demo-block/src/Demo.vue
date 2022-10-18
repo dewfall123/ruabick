@@ -25,9 +25,10 @@ const props = withDefaults(
   },
 );
 
-const { showTip, copyCode } = useCopyCode(props.code);
-
 const decodedCode = computed(() => decodeURIComponent(props.code));
+
+const { showTip, copyCode } = useCopyCode(decodedCode.value);
+
 const decodedHighlightedCode = computed(() =>
   decodeURIComponent(props.highlightedCode),
 );
