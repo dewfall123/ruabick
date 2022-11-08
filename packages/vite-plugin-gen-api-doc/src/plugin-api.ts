@@ -14,7 +14,7 @@ export function demoBlockPlugin(md: MarkdownRenderer) {
     const token = tokens[idx];
     const content = token.content.trim();
 
-    if (!content.startsWith(`<${ApiTag} `)) {
+    if (!(content.startsWith(`<${ApiTag} `) || content.startsWith(`<${ApiTag}\n`))) {
       return defaultRender!(tokens, idx, ...args);
     }
 

@@ -13,7 +13,7 @@ export function demoBlockPlugin(md: MarkdownRenderer) {
       const token = tokens[idx];
       const content = token.content.trim();
 
-      if (!content.startsWith(`<${DemoTag} `)) {
+      if (!(content.startsWith(`<${DemoTag} `) || content.startsWith(`<${DemoTag}\n`))) {
         return defaultRender!(tokens, idx, options, env, self);
       }
 
