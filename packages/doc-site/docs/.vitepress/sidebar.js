@@ -11,7 +11,8 @@ export const sidebar = {
       text: 'featrues',
       items: [
         { text: 'Demo display', link: '/en/features/demo' },
-        { text: 'Api auto gen', link: '/en/features/api' },
+        { text: 'Vue api auto gen', link: '/en/features/api' },
+        { text: 'Ts api auto gen', link: '/en/features/api-ts' },
         { text: 'File mapping', link: '/en/features/mapping' },
       ],
     },
@@ -28,7 +29,8 @@ export const sidebar = {
       text: '特性',
       items: [
         { text: 'Demo展示', link: '/features/demo' },
-        { text: 'Api文档生成', link: '/features/api' },
+        { text: 'Vue文档生成', link: '/features/api' },
+        { text: 'ts文档生成', link: '/features/api-ts' },
         { text: '文件映射', link: '/features/mapping' },
       ],
     },

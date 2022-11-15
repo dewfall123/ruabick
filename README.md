@@ -44,6 +44,12 @@
 
 [查看效果](https://dewfall123.github.io/ruabick/features/api.html#api-%E6%96%87%E6%A1%A3%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)
 
+对于 ts 文件，暂时只支持生成 ts 文件里面 interface 文档，而且必须要有 jsDoc 格式的注释。
+
+```html
+<API src="./demo.ts" lang="zh"></API>
+```
+
 ### 3. 文件映射
 
 一般来说，我们使用 VitePress 会单独建一个`docs`目录，把文档集中放在此目录下。但是`Demo`文件放在`docs`目录下面会让`组件源码`和`demo.vue`隔得太远，放到一起更为合理。

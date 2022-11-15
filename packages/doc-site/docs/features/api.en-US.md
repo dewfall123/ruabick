@@ -1,4 +1,4 @@
-# API 文档自动生成
+# Vue API 文档自动生成
 
 markdown 写一个 API 组件，传入 src 属性。
 
