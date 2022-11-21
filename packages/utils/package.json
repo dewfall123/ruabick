@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@vue/compiler-core": "^3.2.37",
-    "vitepress": "1.0.0-alpha.13"
+    "vitepress": "1.0.0-alpha.29"
   },
   "devDependencies": {
     "unbuild": "^0.7.6"
