@@ -1,5 +1,13 @@
 # @ruabick/vite-plugin-gen-api-doc
 
+## 0.3.1
+
+### Patch Changes
+
+- fix create-vlib `pnpm serve` bug
+- Updated dependencies
+  - @ruabick/utils@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @ruabick/create-vlib
 
+## 0.3.1
+
+### Patch Changes
+
+- fix create-vlib `pnpm serve` bug
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "@ruabick/vite-plugin-gen-api-doc",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/parser": "^7.18.11",
-    "@ruabick/utils": "workspace:^0.3.0",
+    "@ruabick/utils": "workspace:^0.3.1",
     "@vue/compiler-core": "^3.2.37",
     "chalk": "^5.0.1",
     "comment-parser": "^1.3.1",
