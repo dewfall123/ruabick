@@ -36,25 +36,33 @@ export function getDemoComponent(
 }
 
 let fenceIndex = 1;
+const codeFileMap: Record<string, { demoName: string; demoPath: string }> = {};
+
 export function genDemoByCode(
   md: MarkdownRenderer,
   env: any,
   path: string,
   code: string,
 ) {
-  let demoName = '';
-  let demoPath = '';
+  let { demoName = '', demoPath = '' } = codeFileMap[code] ?? {};
 
-  while (true) {
-    demoName = `demo-${fenceIndex++}.vue`;
-    demoPath = join(dirname(path), demoName);
-    if (!fsExtra.existsSync(demoPath)) {
-      break;
+  if (!codeFileMap[code]) {
+    while (true) {
+      demoName = `demo-${fenceIndex++}.vue`;
+      demoPath = join(dirname(path), demoName);
+      if (!fsExtra.existsSync(demoPath)) {
+        break;
+      }
     }
-  }
 
-  fsExtra.createFileSync(demoPath);
-  fsExtra.writeFileSync(demoPath, code);
+    fsExtra.createFileSync(demoPath);
+    fsExtra.writeFileSync(demoPath, code);
+
+    codeFileMap[code] = {
+      demoName,
+      demoPath,
+    };
+  }
 
   return getDemoComponent(md, env, {
     path: demoPath,
