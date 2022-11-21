@@ -1,5 +1,11 @@
 # @ruabick/utils
 
+## 0.3.0
+
+### Minor Changes
+
+- #fix 18 #20
+
 ## 0.2.9
 
 ### Patch Changes
