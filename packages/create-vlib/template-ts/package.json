@@ -16,7 +16,7 @@
     "dev": "initial-scan docs && vitepress dev .docs --host",
     "build": "unbuild",
     "site:build": "initial-scan docs && cross-env NODE_ENV=production vitepress build .docs",
-    "serve": "vitepress serve .docs --host",
+    "serve": "cross-env NODE_ENV=production vitepress serve .docs --host",
     "deploy": "gh-pages -d .docs/.vitepress/dist -t true",
     "docs-build-deploy": "yarn docs-build && yarn docs-deploy",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",

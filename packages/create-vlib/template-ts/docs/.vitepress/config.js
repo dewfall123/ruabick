@@ -27,4 +27,7 @@ export default defineConfig({
       dark: 'github-dark',
     },
   },
+  buildEnd() {
+    process.exit(0);
+  },
 });
