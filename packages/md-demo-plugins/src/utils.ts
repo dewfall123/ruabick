@@ -49,7 +49,7 @@ export function genDemoByCode(
   if (!codeFileMap[code]) {
     while (true) {
       demoName = `demo-${fenceIndex++}.vue`;
-      demoPath = join(dirname(path), demoName);
+      demoPath = join(dirname(path), 'dist', demoName);
       if (!fsExtra.existsSync(demoPath)) {
         break;
       }
