@@ -16,7 +16,7 @@ export async function resolveLocaleConfigs(
 
   const langToPathMap = Object.entries(siteData.locales).reduce(
     (map, [path, localeConfig]) => {
-      map[localeConfig.lang] = path;
+      map[localeConfig.lang!] = path;
       return map;
     },
     {} as Record<string, string>,
