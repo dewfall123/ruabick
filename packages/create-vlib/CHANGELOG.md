@@ -1,5 +1,11 @@
 # @ruabick/create-vlib
 
+## 0.3.3
+
+### Patch Changes
+
+- build
+
 ## 0.3.2
 
 ### Patch Changes
