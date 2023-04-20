@@ -1,5 +1,13 @@
 # @ruabick/vite-plugin-gen-api-doc
 
+## 0.3.2
+
+### Patch Changes
+
+- adapt viteptess 0.7.2 beta
+- Updated dependencies
+  - @ruabick/utils@0.3.2
+
 ## 0.3.1
 
 ### Patch Changes

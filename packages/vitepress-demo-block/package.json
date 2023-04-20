@@ -1,6 +1,6 @@
 {
   "name": "@ruabick/vitepress-demo-block",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT",
   "type": "module",
   "types": "./dist/index.d.ts",
